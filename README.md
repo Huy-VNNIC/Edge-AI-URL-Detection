@@ -1,6 +1,6 @@
 # 🧠 Edge-AI Real-Time Malicious Domain & URL Detection in IoT Gateway Environments
 
-![System Architecture](https://res.cloudinary.com/dh41tyuha/image/upload/v1761564853/Screenshot_from_2025-10-27_20-33-13_akxnb3.png)
+![System Architecture](https://res.cloudinary.com/dh41tyuha/image/upload/v1761564853/Screenshot_from_2025-10-27_20-33-13_akxnb3.png) 
 
 ## 🚀 Overview
 This project proposes an **Edge-AI framework** for detecting **malicious domains and URLs** in **IoT gateway environments** using **hybrid multi-feature analysis** and **containerized edge deployment** (Docker).
