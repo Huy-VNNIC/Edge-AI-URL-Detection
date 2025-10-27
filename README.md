@@ -1,7 +1,3 @@
-
----
-
-````markdown
 # 🧠 Edge-AI Real-Time Malicious Domain & URL Detection in IoT Gateway Environments
 
 ![System Architecture](https://res.cloudinary.com/dh41tyuha/image/upload/v1761564853/Screenshot_from_2025-10-27_20-33-13_akxnb3.png)
@@ -57,7 +53,7 @@ services:
   api: ...
   prometheus:
   grafana:
-````
+```
 
 Run the stack:
 
@@ -127,11 +123,3 @@ Department of Software, Chungbuk National University
 ---
 
 > “Deploying intelligence where data originates — the Edge.”
-
-```
-
----
-
-Bạn muốn mình thêm luôn **mục hướng dẫn huấn luyện mô hình (Training Guide)** hoặc **Evaluation + Dashboard Setup** vào phần README này không?  
-Nếu có, mình có thể mở rộng thêm phần hướng dẫn `train_model.py`, `metrics_exporter.py`, và biểu đồ Grafana.
-```
