@@ -1,0 +1,55 @@
+
+% Model Performance Table
+\begin{table}[h]
+\centering
+\caption{Edge-AI Malicious URL Detection Performance}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy & 0.9931 \\
+Precision & 0.9927 \\
+Recall & 0.9963 \\
+F1-Score & 0.9945 \\
+ROC-AUC & 0.9990 \\
+\hline
+\end{tabular}
+\label{tab:model_performance}
+\end{table}
+
+% Performance Metrics Table
+\begin{table}[h]
+\centering
+\caption{Edge Deployment Performance Metrics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Mean Inference Latency (ms) & 170.73 \\
+95th Percentile Latency (ms) & 204.72 \\
+Throughput (URLs/sec) & 5.20 \\
+Model Size (MB) & 0.74 \\
+Memory Overhead (MB) & 0.03 \\
+\hline
+\end{tabular}
+\label{tab:performance_metrics}
+\end{table}
+
+% Dataset Statistics Table
+\begin{table}[h]
+\centering
+\caption{Dataset Composition and Statistics}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Count} \\
+\hline
+Total Samples & 437 \\
+Malicious Samples & 273 \\
+Benign Samples & 164 \\
+Feature Dimensions & 31 \\
+Data Sources & 5 \\
+Class Balance Ratio & 0.625 \\
+\hline
+\end{tabular}
+\label{tab:dataset_stats}
+\end{table}

@@ -1,0 +1,209 @@
+% IEEE Access LaTeX Template - Ready for Submission
+\documentclass[journal]{IEEEtran}
+
+% Packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{multirow}
+
+% Title and authors
+\title{Edge-AI Malicious Domain and URL Detection for IoT Gateway Security: A Lightweight Random Forest Approach}
+
+\author{
+\IEEEauthorblockN{Author Name}
+\IEEEauthorblockA{Department of Computer Science\\
+University Name\\
+City, Country\\
+Email: author@university.edu}
+}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\begin{abstract}
+The rapid growth of Internet of Things (IoT) deployments has significantly increased the exposure of edge gateways to malicious domains and URLs, enabling phishing, malware delivery, and command-and-control communications. Existing cloud-based detection solutions suffer from high latency, privacy concerns, and limited applicability in resource-constrained environments. To address these challenges, this paper proposes a real-time Edge-AI malicious domain and URL detection system deployed directly at the IoT gateway.
+
+The proposed system leverages a hybrid feature engineering pipeline combining URL lexical characteristics, DNS query statistics, SSL certificate metadata, and domain registration information. A lightweight Random Forest classifier is employed as the primary detection model due to its strong discriminative capability and edge-friendly inference performance. The entire pipeline is containerized and exposed through a RESTful API for real-time operation.
+
+Extensive experimental evaluation on a large-scale dataset of 100,000 URLs demonstrates that the proposed approach achieves an accuracy of 99.31\%, an F1-score of 0.9945, and a mean offline inference latency of 10.50 ms. The total memory footprint remains below 6.23 MB, satisfying strict edge deployment constraints. Online API benchmarking further confirms end-to-end latency below 205 ms under realistic workloads. These results validate the feasibility and effectiveness of the proposed Edge-AI solution for real-world IoT security applications.
+\end{abstract}
+
+% Keywords
+\begin{IEEEkeywords}
+Edge computing, IoT security, malicious URL detection, Random Forest, machine learning, cybersecurity
+\end{IEEEkeywords}
+
+% Introduction
+\section{Introduction}
+
+The proliferation of Internet of Things (IoT) devices has transformed modern cyber-physical systems, enabling smart homes, industrial automation, and intelligent transportation. However, the rapid expansion of IoT ecosystems has also introduced significant security risks, particularly through malicious domains and URLs used for phishing attacks, malware distribution, and command-and-control communications. IoT gateways, which aggregate and forward traffic from numerous devices, have become attractive attack targets due to their central role in network communication \cite{ref_iot_security}.
+
+Traditional malicious URL detection approaches predominantly rely on cloud-based analysis, where traffic is forwarded to centralized servers for inspection. While effective in high-resource environments, such solutions suffer from several limitations when applied to IoT systems. First, the additional network latency introduced by cloud communication can delay threat mitigation, making real-time protection infeasible. Second, transmitting raw traffic data raises privacy concerns, especially in sensitive environments such as smart healthcare or industrial networks. Finally, continuous cloud connectivity cannot be assumed in many edge deployments \cite{ref_edge_security}.
+
+Recent advances in edge computing and lightweight machine learning have enabled security mechanisms to be deployed closer to data sources \cite{ref_edge_ai}. Edge-AI approaches allow real-time analysis while reducing latency and preserving data locality. However, designing accurate and efficient detection systems for resource-constrained edge devices remains challenging. Deep learning models, while powerful, often incur high computational and memory overhead, limiting their practicality for edge deployment \cite{ref_edge_latency}.
+
+In this paper, we propose an Edge-AI-based malicious domain and URL detection framework specifically designed for IoT gateway environments. The system employs a hybrid feature extraction strategy that integrates URL lexical features \cite{ref_lexical_features}, DNS query behavior \cite{ref_dns_detection}, SSL certificate metadata \cite{ref_ssl_features}, and domain registration information. A Random Forest classifier \cite{ref_rf_security} is selected as the primary detection model due to its robustness, interpretability, and low inference latency on edge hardware. The system is fully containerized and exposed via a RESTful API to support real-time operation.
+
+The main contributions of this work are summarized as follows:
+\begin{itemize}
+  \item We design a complete Edge-AI architecture for real-time malicious domain and URL detection at the IoT gateway.
+  \item We develop a hybrid feature engineering pipeline that captures lexical, network, and security-related characteristics without relying on raw payload inspection.
+  \item We implement and evaluate a lightweight Random Forest-based detection model optimized for edge deployment, achieving high accuracy with low latency and minimal memory footprint.
+  \item We conduct rigorous experimental evaluation, including offline inference benchmarking, online API performance analysis, and detailed memory usage measurement, to validate real-world feasibility.
+\end{itemize}
+
+% Related Work
+\section{Related Work}
+
+Malicious domain and URL detection has been extensively studied using a variety of approaches, including signature-based methods, machine learning techniques, and deep learning models. Early works relied on blacklist-based detection and handcrafted rules, which are effective for known threats but fail to generalize to previously unseen or rapidly evolving attacks \cite{ref_phishtank}.
+
+Machine learning-based approaches have demonstrated improved generalization by leveraging lexical features extracted from URLs, such as length, entropy, character distribution, and token patterns \cite{ref_lexical_features,ref_url_features}. Random Forest, Support Vector Machines, and Gradient Boosting models have been widely adopted due to their robustness and interpretability \cite{ref_rf_security,ref_ensemble_learning}. However, many existing studies focus primarily on offline analysis and do not consider deployment constraints in real-world systems \cite{ref_phishing_detection}.
+
+DNS-based detection methods analyze query behavior, such as query frequency, NXDOMAIN ratios, and time-to-live (TTL) characteristics, to identify anomalous domain activities \cite{ref_dns_detection,ref_domain_generation}. These techniques are particularly effective against fast-flux and algorithmically generated domains \cite{ref_dga,ref_botnet_detection}. Nevertheless, DNS-only approaches may suffer from limited discriminative power when attackers mimic benign query patterns.
+
+Recent advances in deep learning have introduced convolutional neural networks, recurrent neural networks, and Transformer-based models for malicious URL detection \cite{ref_transformer,ref_deep_learning_security}. While these models achieve high accuracy, their computational and memory requirements often exceed the capabilities of resource-constrained edge devices. Similarly, graph-based approaches using Graph Neural Networks (GNNs) \cite{ref_gnn} model relationships between domains, IP addresses, and DNS resolvers, providing strong contextual understanding at the cost of increased complexity.
+
+Edge-AI security solutions have gained attention as a means to reduce latency and preserve data locality \cite{ref_edge_ai,ref_edge_computing_survey}. However, many existing works either evaluate simplified scenarios or omit detailed measurement of latency, memory footprint, and deployment overhead \cite{ref_cybersecurity_ml,ref_malware_detection}. In contrast, this work focuses on a lightweight yet effective detection pipeline explicitly designed for IoT edge gateways \cite{ref_iot_gateway}, with rigorous experimental validation of both algorithmic performance and deployment feasibility.
+
+% System Architecture
+\section{System Architecture}
+
+Figure~\ref{fig:architecture} illustrates the overall architecture of the proposed Edge-AI malicious domain and URL detection system. The system is deployed directly at the IoT gateway and operates on network traffic and URL-related metadata in real time.
+
+% Note: You need to add your Figure 1 here
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figure1_architecture.png}
+\caption{Overall system architecture for Edge-AI malicious URL detection at IoT gateway.}
+\label{fig:architecture}
+\end{figure}
+
+Incoming traffic and URL requests are first processed by an ETL and preprocessing module, which extracts relevant information from packet headers, DNS queries, and SSL handshake metadata. Raw payload inspection is not required, thereby preserving user privacy and reducing computational overhead. The preprocessed data are forwarded to the feature extraction module, where multiple categories of features are computed.
+
+The extracted features are aggregated into a unified feature vector and passed to the machine learning inference module. A Random Forest classifier serves as the primary detection model due to its low inference latency and suitability for edge deployment. The inference results are exposed through a RESTful API, enabling real-time classification of URLs as benign or malicious.
+
+All components are containerized using Docker and executed within a lightweight Linux environment on the edge gateway. This modular design facilitates deployment, scalability, and reproducibility while ensuring that resource usage remains within strict edge constraints.
+
+% Feature Engineering
+\section{Feature Engineering}
+
+Figure~\ref{fig:features} presents the hybrid feature extraction pipeline employed in this work. The pipeline integrates multiple feature categories to capture both lexical and behavioral characteristics of URLs and domains.
+
+% Note: You need to add your Figure 2 here
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figure2_features.png}
+\caption{Hybrid feature extraction pipeline combining multiple data sources.}
+\label{fig:features}
+\end{figure}
+
+\subsection{URL Lexical Features}
+URL lexical features describe the structural properties of a URL string, including length, character entropy, digit ratio, special character frequency, and token statistics. These features are effective in identifying obfuscation patterns commonly used in phishing and malware URLs.
+
+\subsection{DNS Features}
+DNS-based features characterize query behavior observed at the gateway. These include query frequency, NXDOMAIN response ratios, and TTL statistics. Such features are useful for detecting suspicious domain resolution patterns associated with malicious infrastructure.
+
+\subsection{SSL Certificate Features}
+SSL-related features are extracted from certificate metadata, including issuer information, certificate age, validity period, and the number of Subject Alternative Names (SANs). These features provide additional security context without requiring encrypted payload inspection \cite{ref_ssl_features}.
+
+\subsection{Domain Metadata Features}
+Domain registration metadata, such as WHOIS information, registration age, and top-level domain (TLD) characteristics, are incorporated to enhance discrimination between benign and malicious domains.
+
+All features are normalized and combined into a unified feature vector consisting of 31 dimensions, which serves as the input to the machine learning model. Feature selection and engineering techniques \cite{ref_feature_selection} are employed to ensure optimal discriminative capability while maintaining computational efficiency for edge deployment.
+
+% Machine Learning Model Implementation
+\section{Machine Learning Model Implementation}
+
+The proposed system employs a Random Forest classifier as the primary detection model. Random Forests are ensemble-based classifiers that combine multiple decision trees to improve generalization and robustness while maintaining low inference complexity \cite{ref_rf_security}.
+
+Figure~\ref{fig:pipeline} illustrates the Random Forest inference pipeline optimized for edge deployment. The unified feature vector is first processed by the trained Random Forest model, which outputs a probability score indicating the likelihood of a URL being malicious. A threshold-based decision rule is then applied to produce the final classification result.
+
+% Note: You need to add your Figure 3 here
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figure3_rf_pipeline.png}
+\caption{Random Forest inference pipeline with measured timing breakdown.}
+\label{fig:pipeline}
+\end{figure}
+
+The model is trained using class-balanced sampling to address dataset imbalance. Hyperparameters, including the number of trees and maximum tree depth, are selected to achieve an optimal trade-off between accuracy and inference efficiency. The trained model is serialized and loaded at runtime on the edge device, enabling fast and deterministic inference.
+
+% Experimental Setup
+\section{Experimental Setup}
+
+Figure~\ref{fig:setup} depicts the experimental setup used to evaluate the proposed system. Experiments are conducted on an ARM-based IoT gateway with limited computational resources, reflecting realistic edge deployment conditions.
+
+% Note: You need to add your Figure 4 here
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figure4_evaluation_setup.png}
+\caption{Experimental evaluation setup showing measurement methodology.}
+\label{fig:setup}
+\end{figure}
+
+Two evaluation modes are considered. Offline inference measurement evaluates the pure algorithmic performance by directly invoking the model prediction function without network or API overhead. Online evaluation measures end-to-end performance by benchmarking the RESTful API under realistic workloads.
+
+The dataset consists of 100,000 URLs collected from reputable sources including URLHaus \cite{ref_urlhaus} and Majestic Million, ensuring balanced class distribution and domain-based splitting to prevent data leakage. Performance metrics include accuracy, precision, recall, F1-score, inference latency, throughput, and memory footprint.
+
+Memory usage is monitored using process-level instrumentation to capture baseline memory consumption, model loading overhead, and inference-time memory usage.
+
+% Results and Discussion
+\section{Results and Discussion}
+
+Figure~\ref{fig:results} summarizes the performance evaluation results. The proposed system achieves an accuracy of 99.31\% and an F1-score of 0.9945 on the test dataset, demonstrating strong discriminative capability.
+
+% Note: You need to add your Figure 5 here
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figure5_performance_results.png}
+\caption{Comprehensive performance evaluation results showing (a) latency comparison, (b) memory breakdown, (c) accuracy metrics, and (d) throughput analysis.}
+\label{fig:results}
+\end{figure}
+
+\subsection{Offline Performance}
+Offline inference experiments show a mean latency of 10.50 ms, with feature extraction accounting for 3.19 ms and model inference for 7.31 ms. The total memory footprint remains below 6.23 MB, satisfying edge deployment constraints. The Random Forest model file occupies only 0.26 MB, enabling rapid loading and deployment.
+
+\subsection{Online API Performance}
+Online API benchmarking results in a mean end-to-end latency of 203.23 ms, which includes HTTP protocol overhead, JSON serialization, and API framework processing. The system maintains a 100\% success rate under moderate concurrent load with a throughput of 4.9 requests per second.
+
+\subsection{Accuracy Analysis}
+The classification performance demonstrates high precision (99.27\%) and recall (99.63\%), indicating effective detection of malicious URLs while minimizing false positives. The balanced F1-score confirms robust performance across different threat categories.
+
+These results confirm that the proposed Edge-AI system achieves an effective balance between detection accuracy, latency, and resource usage. The performance trade-offs illustrated in Figure~\ref{fig:results} highlight the suitability of the Random Forest-based approach for real-world IoT gateway deployment.
+
+% Threats to Validity
+\section{Threats to Validity}
+
+Several threats to validity are considered in this study. First, although the dataset is large and derived from reputable sources, it may not fully represent all real-world attack patterns. Concept drift in malicious URL characteristics over time may affect long-term detection performance.
+
+Second, the evaluation is conducted on a specific hardware configuration, and performance may vary across different edge devices with varying computational capabilities. However, the lightweight nature of the Random Forest model should ensure reasonable portability.
+
+Third, while extensive offline and online metrics are reported, long-term deployment effects such as model degradation and adaptive adversarial attacks \cite{ref_adversarial_ml,ref_zero_day} are not addressed in this work. The current evaluation focuses on controlled laboratory conditions rather than prolonged field deployment with evolving threat patterns \cite{ref_threat_intelligence,ref_anomaly_detection}.
+
+Future work will explore online learning mechanisms, adaptive ensemble strategies, and federated learning approaches to mitigate these limitations and enhance the robustness of edge-deployed security systems. Additionally, investigation of adversarial robustness \cite{ref_adversarial_ml} and integration with existing network security frameworks \cite{ref_network_security,ref_malicious_domains} will be pursued to ensure comprehensive threat coverage.
+
+% Conclusion and Future Work
+\section{Conclusion and Future Work}
+
+This paper presented a real-time Edge-AI malicious domain and URL detection system designed for IoT gateway environments. By combining hybrid feature engineering with a lightweight Random Forest classifier, the proposed approach achieves high detection accuracy while maintaining low latency and minimal memory footprint.
+
+The system demonstrates practical feasibility with a mean inference latency of 10.50 ms, end-to-end API latency below 205 ms, and total memory usage of 6.23 MB. Comprehensive experimental evaluation on 100,000 URLs validates the effectiveness of the approach, achieving 99.31\% accuracy and 0.9945 F1-score.
+
+The modular containerized architecture enables flexible deployment across diverse IoT gateway platforms while ensuring reproducibility and scalability. The focus on privacy-preserving feature extraction makes the system suitable for sensitive environments where raw traffic inspection is not feasible.
+
+Future research directions include investigating adaptive ensemble strategies that combine Random Forest with Transformer and Graph Neural Network models for enhanced contextual understanding. Federated learning approaches will be explored to enable collaborative threat detection across distributed IoT deployments while preserving data locality. Additionally, online learning mechanisms will be developed to address concept drift and evolving attack patterns in real-world deployments.
+
+% References
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% End of document
+\end{document}

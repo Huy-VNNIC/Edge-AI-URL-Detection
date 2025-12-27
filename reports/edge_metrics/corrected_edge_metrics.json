@@ -1,0 +1,34 @@
+{
+  "memory": {
+    "baseline_memory_mb": 141.3125,
+    "data_loading_overhead_mb": 10.296875,
+    "model_training_overhead_mb": 0.6015625,
+    "model_file_size_mb": 0.2568798065185547,
+    "prediction_overhead_mb": 5.625,
+    "total_model_footprint_mb": 6.2265625
+  },
+  "latency": {
+    "mean_latency_ms": 10.496121661737561,
+    "median_latency_ms": 10.149610228836536,
+    "p95_latency_ms": 12.455580243840808,
+    "p99_latency_ms": 16.057771211490028,
+    "std_latency_ms": 1.2144065411291018,
+    "throughput_urls_per_sec": 95.27328590763084,
+    "feature_extraction_mean_ms": 3.1859716791659594,
+    "model_prediction_mean_ms": 7.308832773938775,
+    "feature_extraction_percentage": 30.35379906827932,
+    "model_prediction_percentage": 69.63365145225315
+  },
+  "api": {
+    "mean_api_latency_ms": 0,
+    "p95_api_latency_ms": 0,
+    "api_success_rate": 0,
+    "api_throughput_req_per_sec": 0
+  },
+  "edge_compliance": {
+    "model_size_under_1mb": true,
+    "latency_under_200ms": true,
+    "memory_footprint_mb": 6.2265625,
+    "edge_ready": true
+  }
+}

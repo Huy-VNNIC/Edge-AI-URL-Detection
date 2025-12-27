@@ -1,0 +1,24 @@
+Model Training Summary
+==================================================
+
+Dataset Information:
+  Total samples: 437
+  Features: 31
+  Benign samples: 164
+  Malicious samples: 273
+
+Random Forest Results:
+  Accuracy: 0.9773
+  ROC-AUC: 0.9931
+
+Top 10 Most Important Features:
+  url_special_ratio: 0.1848
+  url_digit_ratio: 0.1653
+  domain_digit_ratio: 0.1202
+  domain_length: 0.0996
+  url_length: 0.0956
+  domain_entropy: 0.0747
+  url_entropy: 0.0691
+  has_organization: 0.0618
+  ttl_normalized: 0.0569
+  has_registrant: 0.0263

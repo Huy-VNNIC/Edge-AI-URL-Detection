@@ -1,0 +1,52 @@
+Edge-AI URL Detection - API Performance Test
+==================================================
+
+Performance Statistics:
+  Mean Latency: 192.33 ms
+  Min Latency: 170.02 ms
+  Max Latency: 233.04 ms
+  Throughput: 5.20 URLs/sec
+  Total URLs Tested: 8
+
+Individual Test Results:
+------------------------------
+URL: https://google.com
+  Prediction: malicious
+  Confidence: 0.682
+  Processing Time: 233.04ms
+
+URL: http://malicious-site.tk/login.php?redirect=evil
+  Prediction: malicious
+  Confidence: 0.827
+  Processing Time: 170.02ms
+
+URL: https://github.com/microsoft/vscode
+  Prediction: malicious
+  Confidence: 0.770
+  Processing Time: 186.92ms
+
+URL: http://192.168.1.1/admin.php
+  Prediction: malicious
+  Confidence: 0.575
+  Processing Time: 222.93ms
+
+URL: https://shortened.ly/abc123
+  Prediction: malicious
+  Confidence: 0.791
+  Processing Time: 199.29ms
+
+URL: http://www.bank-security-update.com/verify.php
+  Prediction: malicious
+  Confidence: 0.851
+  Processing Time: 175.18ms
+
+URL: https://facebook.com/profile
+  Prediction: malicious
+  Confidence: 0.718
+  Processing Time: 175.79ms
+
+URL: http://suspicious-domain.ml/download.exe
+  Prediction: malicious
+  Confidence: 0.856
+  Processing Time: 175.50ms
+

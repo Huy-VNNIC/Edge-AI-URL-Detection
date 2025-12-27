@@ -1,0 +1,61 @@
+{
+  "performance_statistics": {
+    "mean_latency_ms": 192.3336684703827,
+    "min_latency_ms": 170.0155735015869,
+    "max_latency_ms": 233.03937911987305,
+    "total_urls_tested": 8,
+    "throughput_urls_per_sec": 5.199297699424837,
+    "total_processing_time_ms": 1540.945291519165
+  },
+  "detailed_results": [
+    {
+      "url": "https://google.com",
+      "prediction": "malicious",
+      "confidence": 0.6823425244415858,
+      "processing_time_ms": 233.03937911987305
+    },
+    {
+      "url": "http://malicious-site.tk/login.php?redirect=evil",
+      "prediction": "malicious",
+      "confidence": 0.8265896446628876,
+      "processing_time_ms": 170.0155735015869
+    },
+    {
+      "url": "https://github.com/microsoft/vscode",
+      "prediction": "malicious",
+      "confidence": 0.7695528769768011,
+      "processing_time_ms": 186.9211196899414
+    },
+    {
+      "url": "http://192.168.1.1/admin.php",
+      "prediction": "malicious",
+      "confidence": 0.5751136051960958,
+      "processing_time_ms": 222.9328155517578
+    },
+    {
+      "url": "https://shortened.ly/abc123",
+      "prediction": "malicious",
+      "confidence": 0.790686838652028,
+      "processing_time_ms": 199.28646087646484
+    },
+    {
+      "url": "http://www.bank-security-update.com/verify.php",
+      "prediction": "malicious",
+      "confidence": 0.8508053858701081,
+      "processing_time_ms": 175.18281936645508
+    },
+    {
+      "url": "https://facebook.com/profile",
+      "prediction": "malicious",
+      "confidence": 0.7178734399678773,
+      "processing_time_ms": 175.79340934753418
+    },
+    {
+      "url": "http://suspicious-domain.ml/download.exe",
+      "prediction": "malicious",
+      "confidence": 0.8556514786199402,
+      "processing_time_ms": 175.49777030944824
+    }
+  ],
+  "test_timestamp": "2025-12-27 19:58:08"
+}

@@ -1,0 +1,425 @@
+{
+  "lexical_only": {
+    "num_features": 24,
+    "features": [
+      "url_length",
+      "url_entropy",
+      "url_digit_ratio",
+      "url_special_ratio",
+      "has_https",
+      "has_ip",
+      "domain_length",
+      "domain_entropy",
+      "num_subdomains",
+      "domain_digit_ratio",
+      "num_hyphens",
+      "num_underscores",
+      "suspicious_tld",
+      "domain_has_vowels",
+      "path_length",
+      "num_path_segments",
+      "path_entropy",
+      "has_exe",
+      "query_length",
+      "num_query_params",
+      "query_entropy",
+      "is_shortened",
+      "has_punycode",
+      "obfuscated"
+    ],
+    "metrics": {
+      "accuracy": {
+        "mean": 0.9999800000000001,
+        "std": 3.999999999999559e-05,
+        "scores": [
+          0.9999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "recall": {
+        "mean": 0.9999600000000001,
+        "std": 7.99999999999912e-05,
+        "scores": [
+          0.9998,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "f1": {
+        "mean": 0.9999799979997999,
+        "std": 4.0004000400051254e-05,
+        "scores": [
+          0.9998999899989999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.999989558,
+        "std": 2.0883999999998792e-05,
+        "scores": [
+          0.99994779,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "lexical_dns": {
+    "num_features": 26,
+    "features": [
+      "url_length",
+      "url_entropy",
+      "url_digit_ratio",
+      "url_special_ratio",
+      "has_https",
+      "has_ip",
+      "domain_length",
+      "domain_entropy",
+      "num_subdomains",
+      "domain_digit_ratio",
+      "num_hyphens",
+      "num_underscores",
+      "suspicious_tld",
+      "domain_has_vowels",
+      "path_length",
+      "num_path_segments",
+      "path_entropy",
+      "has_exe",
+      "query_length",
+      "num_query_params",
+      "query_entropy",
+      "is_shortened",
+      "has_punycode",
+      "obfuscated",
+      "ttl_normalized",
+      "name_server_count"
+    ],
+    "metrics": {
+      "accuracy": {
+        "mean": 0.9999800000000001,
+        "std": 3.999999999999559e-05,
+        "scores": [
+          0.9999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "recall": {
+        "mean": 0.9999600000000001,
+        "std": 7.99999999999912e-05,
+        "scores": [
+          0.9998,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "f1": {
+        "mean": 0.9999799979997999,
+        "std": 4.0004000400051254e-05,
+        "scores": [
+          0.9998999899989999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.999989813,
+        "std": 2.0373999999978575e-05,
+        "scores": [
+          0.999949065,
+          1.0,
+          1.0,
+          0.9999999999999999,
+          1.0
+        ]
+      }
+    }
+  },
+  "lexical_whois": {
+    "num_features": 27,
+    "features": [
+      "url_length",
+      "url_entropy",
+      "url_digit_ratio",
+      "url_special_ratio",
+      "has_https",
+      "has_ip",
+      "domain_length",
+      "domain_entropy",
+      "num_subdomains",
+      "domain_digit_ratio",
+      "num_hyphens",
+      "num_underscores",
+      "suspicious_tld",
+      "domain_has_vowels",
+      "path_length",
+      "num_path_segments",
+      "path_entropy",
+      "has_exe",
+      "query_length",
+      "num_query_params",
+      "query_entropy",
+      "is_shortened",
+      "has_punycode",
+      "obfuscated",
+      "domain_age_days",
+      "has_registrant",
+      "has_organization"
+    ],
+    "metrics": {
+      "accuracy": {
+        "mean": 0.9999800000000001,
+        "std": 3.999999999999559e-05,
+        "scores": [
+          0.9999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "recall": {
+        "mean": 0.9999600000000001,
+        "std": 7.99999999999912e-05,
+        "scores": [
+          0.9998,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "f1": {
+        "mean": 0.9999799979997999,
+        "std": 4.0004000400051254e-05,
+        "scores": [
+          0.9998999899989999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.99997799,
+        "std": 4.402000000003348e-05,
+        "scores": [
+          0.9998899499999999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "full_hybrid": {
+    "num_features": 31,
+    "features": [
+      "url_length",
+      "url_entropy",
+      "url_digit_ratio",
+      "url_special_ratio",
+      "has_https",
+      "has_ip",
+      "domain_length",
+      "domain_entropy",
+      "num_subdomains",
+      "domain_digit_ratio",
+      "num_hyphens",
+      "num_underscores",
+      "suspicious_tld",
+      "domain_has_vowels",
+      "path_length",
+      "num_path_segments",
+      "path_entropy",
+      "has_exe",
+      "query_length",
+      "num_query_params",
+      "query_entropy",
+      "ttl_normalized",
+      "name_server_count",
+      "domain_age_days",
+      "has_page_rank",
+      "has_alexa_rank",
+      "has_organization",
+      "has_registrant",
+      "is_shortened",
+      "has_punycode",
+      "obfuscated"
+    ],
+    "metrics": {
+      "accuracy": {
+        "mean": 0.9999800000000001,
+        "std": 3.999999999999559e-05,
+        "scores": [
+          0.9999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "recall": {
+        "mean": 0.9999600000000001,
+        "std": 7.99999999999912e-05,
+        "scores": [
+          0.9998,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "f1": {
+        "mean": 0.9999799979997999,
+        "std": 4.0004000400051254e-05,
+        "scores": [
+          0.9998999899989999,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9999999049999999,
+        "std": 1.8999999999991245e-07,
+        "scores": [
+          0.999999525,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "metadata_only": {
+    "num_features": 5,
+    "features": [
+      "ttl_normalized",
+      "name_server_count",
+      "domain_age_days",
+      "has_registrant",
+      "has_organization"
+    ],
+    "metrics": {
+      "accuracy": {
+        "mean": 0.5,
+        "std": 0.0,
+        "scores": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "precision": {
+        "mean": 0.5,
+        "std": 0.0,
+        "scores": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "f1": {
+        "mean": 0.6666666666666666,
+        "std": 0.0,
+        "scores": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.5,
+        "std": 0.0,
+        "scores": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+# Core ML & Data Processing
+pandas==2.2.2
+numpy==2.0.1
+scikit-learn==1.5.1
+joblib==1.4.2
+scipy==1.13.1
+
+# Deep Learning
+torch==2.1.0
+transformers==4.36.0
+torch-geometric==2.4.0
+onnx==1.15.0
+onnxruntime==1.16.3
+
+# Feature Engineering & URLs
+tldextract==5.1.2
+urllib3==2.2.2
+requests==2.32.3
+networkx==3.2.1
+
+# Configuration & Utils  
+pyyaml==6.0.2
+python-dotenv==1.0.0
+click==8.1.7
+tqdm==4.66.1
+
+# API & Web
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+
+# Visualization & Monitoring
+matplotlib==3.9.1
+seaborn==0.13.0
+plotly==5.17.0
+prometheus-client==0.19.0
+
+# Edge & Docker utilities
+psutil==5.9.6
+redis==5.0.1
+
+# Development & Testing
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1

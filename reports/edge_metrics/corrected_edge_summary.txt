@@ -1,0 +1,9 @@
+CORRECTED EDGE-AI METRICS SUMMARY
+========================================
+
+Model File Size: 0.26 MB
+Total Memory Footprint: 6.23 MB
+Mean Prediction Latency: 10.50 ms
+P95 Latency: 12.46 ms
+Throughput: 95.3 URLs/sec
+Edge Deployment Ready: YES

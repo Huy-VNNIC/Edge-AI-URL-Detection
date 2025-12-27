@@ -1,0 +1,99 @@
+{
+  "experiment_info": {
+    "system_name": "Edge-AI Real-Time Malicious URL Detection",
+    "architecture": "Random Forest + Feature Engineering + Edge Deployment",
+    "deployment_target": "IoT Edge Gateway",
+    "evaluation_date": "December 27, 2025"
+  },
+  "dataset_statistics": {
+    "total_samples": 437,
+    "malicious_samples": 273,
+    "benign_samples": 164,
+    "data_sources": [
+      "CSV_phishing",
+      "CSV_benign",
+      "CSV_malware",
+      "CSV_spam",
+      "Malicious_URLs_dataset"
+    ],
+    "feature_count": 31,
+    "class_distribution": {
+      "malicious_ratio": 0.625,
+      "benign_ratio": 0.375
+    }
+  },
+  "model_performance": {
+    "accuracy": 0.9931350114416476,
+    "precision": 0.9927007299270073,
+    "recall": 0.9963369963369964,
+    "f1_score": 0.9945155393053017,
+    "roc_auc": 0.9990060752255874,
+    "confusion_matrix": {
+      "true_positives": "272",
+      "true_negatives": "162",
+      "false_positives": "2",
+      "false_negatives": "1"
+    }
+  },
+  "performance_metrics": {
+    "inference_latency": {
+      "mean_ms": 170.72802138328552,
+      "median_ms": 168.38181018829346,
+      "p95_ms": 204.7182321548462,
+      "p99_ms": 231.93316221237183
+    },
+    "throughput": {
+      "urls_per_second": 5.199297699424837,
+      "batch_processing": {
+        "1": {
+          "total_latency_ms": 175.88543891906738,
+          "per_sample_latency_ms": 175.88543891906738,
+          "throughput_samples_per_sec": 5.685518972722602
+        },
+        "10": {
+          "total_latency_ms": 154.89816665649414,
+          "per_sample_latency_ms": 15.489816665649414,
+          "throughput_samples_per_sec": 64.55854330526867
+        },
+        "50": {
+          "total_latency_ms": 172.28317260742188,
+          "per_sample_latency_ms": 3.4456634521484375,
+          "throughput_samples_per_sec": 290.21987024776917
+        },
+        "100": {
+          "total_latency_ms": 193.11213493347168,
+          "per_sample_latency_ms": 1.9311213493347168,
+          "throughput_samples_per_sec": 517.8338483723492
+        }
+      }
+    },
+    "memory_usage": {
+      "model_loading_mb": 0.73828125,
+      "inference_overhead_mb": 0.029296875,
+      "total_memory_mb": 5432.0625
+    }
+  },
+  "edge_deployment_metrics": {
+    "model_size_mb": 0.73828125,
+    "cpu_optimized": true,
+    "real_time_capable": true,
+    "containerized": true,
+    "microservices_architecture": true
+  },
+  "feature_engineering": {
+    "feature_categories": [
+      "URL Lexical Features",
+      "Domain Metadata Features",
+      "DNS Features",
+      "Security Features"
+    ],
+    "total_features": 31,
+    "top_important_features": [
+      "url_special_ratio",
+      "url_digit_ratio",
+      "domain_digit_ratio",
+      "domain_length",
+      "url_length"
+    ]
+  }
+}

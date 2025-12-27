@@ -1,0 +1,5 @@
+total_records: 437
+malicious_records: 273
+benign_records: 164
+sources: ['csv_phishing', 'csv_benign', 'csv_malware', 'csv_spam']
+columns: ['Country', 'ASN', 'TTL', 'IP', 'Domain', 'Name_Server_Count', 'Domain_Age', 'entropy', 'hex_8', 'numeric_percentage', '1gram', 'typos', 'tld', 'char_distribution', 'subdomain', 'puny_coded', 'Organization', 'Country.1', 'longest_word', 'dec_8', 'dec_32', 'Registrant_Name', 'sld', 'shortened', '2gram', 'oc_8', 'State', 'Registrar', 'hex_32', 'Page_Rank', 'oc_32', 'Alexa_Rank', 'len', 'obfuscate_at_sign', 'Emails', '3gram', 'Domain_Name', 'Creation_Date_Time', 'label', 'source', 'url', 'type', 'domain_clean']

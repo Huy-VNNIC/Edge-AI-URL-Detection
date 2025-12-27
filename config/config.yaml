@@ -1,0 +1,76 @@
+# Project Configuration
+data:
+  # Raw data directories (existing datasets)
+  raw_dirs:
+    csvs: "CSVs"
+    malicious_urls: "Malicious URLs dataset" 
+    dns_data: "data_1/DNS_2m"
+    cic_dataset: "CIC_Trap4Phish_2025_Dataset"
+  
+  # Processed data outputs
+  processed:
+    unified_dataset: "data/processed/unified_dataset.csv"
+    features_dataset: "data/processed/features_dataset.csv"
+    train_split: "data/processed/train.csv"
+    test_split: "data/processed/test.csv"
+
+# Feature extraction configuration
+features:
+  url_lexical:
+    enabled: true
+    features: ["length", "entropy", "special_chars", "digits", "subdomains", "tld_suspicious"]
+  
+  dns_features:
+    enabled: true
+    features: ["query_frequency", "ttl_stats", "nxdomain_ratio", "resolver_diversity"]
+    
+  domain_features:
+    enabled: true
+    features: ["age", "registrar_reputation", "whois_privacy", "cert_validity"]
+    
+  graph_features:
+    enabled: true
+    features: ["degree_centrality", "clustering_coeff", "betweenness"]
+
+# Model configuration
+models:
+  random_forest:
+    n_estimators: 300
+    max_depth: 20
+    min_samples_split: 5
+    class_weight: "balanced"
+    
+  transformer:
+    model_name: "distilbert-base-uncased"
+    max_length: 256
+    batch_size: 32
+    learning_rate: 2e-5
+    epochs: 3
+    
+  gnn:
+    hidden_dim: 64
+    num_layers: 3
+    dropout: 0.1
+    learning_rate: 0.001
+    epochs: 100
+
+# Training configuration  
+training:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  stratify: true
+  
+# API configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  log_level: "info"
+  
+# Edge deployment
+edge:
+  max_memory_mb: 1024
+  max_cpu_percent: 80
+  inference_timeout: 5.0
+  batch_size: 16

@@ -1,0 +1,27 @@
+{
+  "dataset_file": "data/processed/urls_balanced_expanded.csv",
+  "total_samples": 100000,
+  "train_samples": 80714,
+  "test_samples": 19286,
+  "cv_folds": 5,
+  "train_label_dist": {
+    "1": 40748,
+    "0": 39966
+  },
+  "test_label_dist": {
+    "0": 10034,
+    "1": 9252
+  },
+  "train_domains": 57155,
+  "test_domains": 14289,
+  "train_sources": {
+    "majestic_million": 39966,
+    "urlhaus_text": 34384,
+    "urlhaus_csv_online": 6364
+  },
+  "test_sources": {
+    "majestic_million": 10034,
+    "urlhaus_text": 7738,
+    "urlhaus_csv_online": 1514
+  }
+}
