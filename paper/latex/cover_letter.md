@@ -96,8 +96,9 @@ Thank you for your time and consideration.
 
 **Phan Luu Tung and Nguyen Nhat Huy**  
 Department of Computer Science  
+International School  
 Duy Tan University  
-Da Nang, Vietnam  
+Da Nang 550000, Vietnam  
 Email: nguyennhathuy11@dtu.edu.vn  
 [Date]
 
