@@ -94,11 +94,15 @@ Thank you for your time and consideration.
 
 **Sincerely,**
 
-**[Your Name]**  
-[Your Title]  
-[Your Institution]  
-[Your Email]  
+**Phan Luu Tung and Nguyen Nhat Huy**  
+Department of Computer Science  
+Duy Tan University  
+Da Nang, Vietnam  
+Email: nguyennhathuy11@dtu.edu.vn  
 [Date]
+
+**Source Code Availability:**
+Complete implementation available at: https://github.com/Huy-VNNIC/Edge-AI-URL-Detection
 
 ---
 
