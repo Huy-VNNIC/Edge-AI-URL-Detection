@@ -1,0 +1,6 @@
+Model,Accuracy (%),F1-Score,CV_F1_Mean,CV_F1_Std,Inference_Time_ms,Model_Size_MB,Memory_Usage_MB,Throughput
+XGBoost,100.00,1.0000,1.0000,0.0001,0.00,0.034,2.4,"562,872"
+Random Forest,99.99,0.9999,0.9996,0.0002,0.00,0.081,3.2,"435,539"
+SVM,99.97,0.9997,0.9995,0.0003,0.06,0.174,2.8,"17,295"
+Neural Network,99.97,0.9997,0.9994,0.0003,0.00,0.041,1.9,"2,300,517"
+Logistic Regression,99.93,0.9993,0.9981,0.0006,0.00,0.002,1.1,"1,277,608"

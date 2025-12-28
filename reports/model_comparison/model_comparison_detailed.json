@@ -4,59 +4,59 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1_score": 1.0,
-    "training_time_sec": 0.9361739158630371,
-    "avg_inference_time_ms": 36.94160223007202,
-    "batch_inference_time_sec": 0.07334589958190918,
+    "training_time_sec": 1.1781764030456543,
+    "avg_inference_time_ms": 47.44384288787842,
+    "batch_inference_time_sec": 0.1162111759185791,
     "model_size_mb": 0.5451745986938477,
-    "memory_usage_mb": 53.421875,
-    "throughput_samples_per_sec": 262945.85123279213
+    "memory_usage_mb": 52.921875,
+    "throughput_samples_per_sec": 165956.49985946555
   },
   "Logistic_Regression": {
     "accuracy": 1.0,
     "precision": 1.0,
     "recall": 1.0,
     "f1_score": 1.0,
-    "training_time_sec": 2.4614129066467285,
-    "avg_inference_time_ms": 2.3645687103271484,
-    "batch_inference_time_sec": 0.013788461685180664,
+    "training_time_sec": 2.290210485458374,
+    "avg_inference_time_ms": 2.181220054626465,
+    "batch_inference_time_sec": 0.017290830612182617,
     "model_size_mb": 0.0019521713256835938,
-    "memory_usage_mb": 13.3046875,
-    "throughput_samples_per_sec": 1398705.7033873394
+    "memory_usage_mb": 10.62890625,
+    "throughput_samples_per_sec": 1115388.8689657075
   },
   "SVM": {
     "accuracy": 0.9988592761588717,
     "precision": 0.998861771775867,
     "recall": 0.9988592761588717,
     "f1_score": 0.9988592218175315,
-    "training_time_sec": 343.08386063575745,
-    "avg_inference_time_ms": 2.003810405731201,
-    "batch_inference_time_sec": 1.564354658126831,
+    "training_time_sec": 390.16596722602844,
+    "avg_inference_time_ms": 1.8806958198547363,
+    "batch_inference_time_sec": 1.6547369956970215,
     "model_size_mb": 0.25498485565185547,
-    "memory_usage_mb": 0.44921875,
-    "throughput_samples_per_sec": 12328.406413346951
+    "memory_usage_mb": 0.27734375,
+    "throughput_samples_per_sec": 11655.024363479706
   },
   "XGBoost": {
     "accuracy": 1.0,
     "precision": 1.0,
     "recall": 1.0,
     "f1_score": 1.0,
-    "training_time_sec": 0.44979000091552734,
-    "avg_inference_time_ms": 7.531859874725342,
-    "batch_inference_time_sec": 0.01503133773803711,
+    "training_time_sec": 0.45490288734436035,
+    "avg_inference_time_ms": 7.653083801269531,
+    "batch_inference_time_sec": 0.01752638816833496,
     "model_size_mb": 0.0930490493774414,
-    "memory_usage_mb": 8.125,
-    "throughput_samples_per_sec": 1283052.8018272372
+    "memory_usage_mb": 9.625,
+    "throughput_samples_per_sec": 1100397.8580620587
   },
   "Neural_Network": {
     "accuracy": 1.0,
     "precision": 1.0,
     "recall": 1.0,
     "f1_score": 1.0,
-    "training_time_sec": 14.937504768371582,
-    "avg_inference_time_ms": 2.530200481414795,
-    "batch_inference_time_sec": 0.02923107147216797,
+    "training_time_sec": 13.87206506729126,
+    "avg_inference_time_ms": 1.8536925315856934,
+    "batch_inference_time_sec": 0.01723337173461914,
     "model_size_mb": 0.13345813751220703,
     "memory_usage_mb": 19.625,
-    "throughput_samples_per_sec": 659777.3885354474
+    "throughput_samples_per_sec": 1119107.7577266817
   }
 }

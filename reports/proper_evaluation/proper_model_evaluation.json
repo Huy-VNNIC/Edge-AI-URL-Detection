@@ -1,0 +1,67 @@
+{
+  "Random_Forest": {
+    "accuracy": 0.9998666666666667,
+    "precision": 0.9998667022127432,
+    "recall": 0.9998666666666667,
+    "f1_score": 0.9998666666642962,
+    "cv_mean": 0.9996444443654321,
+    "cv_std": 0.00022662317644056852,
+    "training_time_sec": 2.013118028640747,
+    "inference_time_ms": 0.002296002705891927,
+    "model_size_mb": 0.08129215240478516,
+    "memory_usage_mb": 3.2,
+    "throughput_samples_per_sec": 435539.55639243487
+  },
+  "Logistic_Regression": {
+    "accuracy": 0.9993333333333333,
+    "precision": 0.9993342210386152,
+    "recall": 0.9993333333333333,
+    "f1_score": 0.999333333037037,
+    "cv_mean": 0.9981333247604415,
+    "cv_std": 0.0005896299884196733,
+    "training_time_sec": 0.41193246841430664,
+    "inference_time_ms": 0.0007827123006184896,
+    "model_size_mb": 0.0019636154174804688,
+    "memory_usage_mb": 1.1,
+    "throughput_samples_per_sec": 1277608.6426772806
+  },
+  "SVM": {
+    "accuracy": 0.9997333333333334,
+    "precision": 0.9997334754797441,
+    "recall": 0.9997333333333334,
+    "f1_score": 0.9997333333143704,
+    "cv_mean": 0.999466666455967,
+    "cv_std": 0.00026666688175607645,
+    "training_time_sec": 14.718583583831787,
+    "inference_time_ms": 0.05781726837158203,
+    "model_size_mb": 0.17409801483154297,
+    "memory_usage_mb": 2.8,
+    "throughput_samples_per_sec": 17295.870734901644
+  },
+  "XGBoost": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "cv_mean": 0.9999555555533608,
+    "cv_std": 8.888889327840488e-05,
+    "training_time_sec": 0.31985902786254883,
+    "inference_time_ms": 0.0017765998840332032,
+    "model_size_mb": 0.034046173095703125,
+    "memory_usage_mb": 2.4,
+    "throughput_samples_per_sec": 562872.9400397231
+  },
+  "Neural_Network": {
+    "accuracy": 0.9997333333333334,
+    "precision": 0.9997334754797441,
+    "recall": 0.9997333333333334,
+    "f1_score": 0.9997333333143704,
+    "cv_mean": 0.9994222220356652,
+    "cv_std": 0.000301437066121202,
+    "training_time_sec": 1.806096076965332,
+    "inference_time_ms": 0.0004346847534179687,
+    "model_size_mb": 0.04143238067626953,
+    "memory_usage_mb": 1.9,
+    "throughput_samples_per_sec": 2300517.770952172
+  }
+}

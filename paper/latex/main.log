@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 13:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.28)  28 DEC 2025 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,14 +358,36 @@ Package pdftex.def Info: figure4_evaluation_setup.png  used on input line 152.
  [3 <./figure2_features.png (PNG copy)> <./figure3_rf_pipeline.png (PNG copy)>]
 
 (./ai_methodology_enhancement.tex
-Underfull \hbox (badness 2512) in paragraph at lines 56--57
-\OT1/ptm/m/n/10 sig-nif-i-cant per-for-mance vari-a-tions (12K-1.4M sam-
+Underfull \hbox (badness 2903) in paragraph at lines 52--53
+[]\OT1/ptm/b/n/10 Edge Com-put-ing Op-ti-miza-tion\OT1/ptm/m/n/10 : Lo-gis-tic 
+Re-gres-
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 77--78
-[]\OT1/ptm/b/n/10 Deployment Bal-ance\OT1/ptm/m/n/10 : Ac-cept-able in-fer-ence
- time
+Underfull \hbox (badness 1661) in paragraph at lines 64--65
+[]\OT1/ptm/b/n/10 Algorithm Ro-bust-ness\OT1/ptm/m/n/10 : Test-ing across lin-e
+ar (LR),
+ []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 65--66
+[]\OT1/ptm/b/n/10 Resource-Constrained Per-for-mance\OT1/ptm/m/n/10 : An-a-lyz-
+ing the
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 65--66
+\OT1/ptm/m/n/10 per-for-mance degra-da-tion and op-ti-miza-tion strate-gies
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
+5.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 4660) in paragraph at lines 75--76
+[]\OT1/ptm/b/n/10 Robust Cross-Validation\OT1/ptm/m/n/10 : Demon-strates con-si
+s-tent
  []
 
 [4 <./figure4_evaluation_setup.png (PNG copy)>]
@@ -385,7 +407,7 @@ File: ai_pipeline_detailed.png Graphic file (type png)
 <use ai_pipeline_detailed.png>
 Package pdftex.def Info: ai_pipeline_detailed.png  used on input line 173.
 (pdftex.def)             Requested size: 252.0pt x 167.98656pt.
- [5 <./feature_importance.png> <./ai_pipeline_detailed.png (PNG copy)>]
+ [5 <./feature_importance.png>]
 <figure5_performance_results.png, id=33, 1541.76pt x 1027.84pt>
 File: figure5_performance_results.png Graphic file (type png)
 <use figure5_performance_results.png>
@@ -409,26 +431,34 @@ Underfull \hbox (badness 2762) in paragraph at lines 219--220
 learn-ing
  []
 
-[6 <./figure5_performance_results.png (PNG copy)>] (./main.bbl) [7] (./main.aux
-) ) 
+[6 <./ai_pipeline_detailed.png (PNG copy)> <./figure5_performance_results.png (
+PNG copy)>]
+Underfull \hbox (badness 1515) in paragraph at lines 237--238
+[]\OT1/ptm/m/n/10 The prac-ti-cal im-pact ex-tends to en-abling au-tonomous
+ []
+
+(./main.bbl [7]) [8
+
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4036 strings out of 480247
- 65320 string characters out of 5896150
- 367861 words of memory out of 5000000
- 21929 multiletter control sequences out of 15000+600000
- 512919 words of font info for 115 fonts, out of 8000000 for 9000
+ 4061 strings out of 480247
+ 65684 string characters out of 5896150
+ 367287 words of memory out of 5000000
+ 21950 multiletter control sequences out of 15000+600000
+ 513233 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,10n,62p,816b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 9339524 bytes).
+ 55i,10n,62p,829b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on main.pdf (8 pages, 9341756 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

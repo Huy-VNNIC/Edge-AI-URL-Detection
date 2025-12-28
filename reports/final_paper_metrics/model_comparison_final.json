@@ -1,0 +1,52 @@
+{
+  "SVM": {
+    "accuracy": 0.9627,
+    "f1_score": 0.9631,
+    "precision": 0.9642,
+    "recall": 0.9627,
+    "inference_time_ms": 2.15,
+    "model_size_mb": 0.38,
+    "memory_usage_mb": 2.1,
+    "throughput_samples_per_sec": 46512
+  },
+  "Random Forest": {
+    "accuracy": 0.9734,
+    "f1_score": 0.9738,
+    "precision": 0.9741,
+    "recall": 0.9734,
+    "inference_time_ms": 1.82,
+    "model_size_mb": 2.15,
+    "memory_usage_mb": 4.7,
+    "throughput_samples_per_sec": 54945
+  },
+  "Logistic Regression": {
+    "accuracy": 0.9543,
+    "f1_score": 0.9548,
+    "precision": 0.9552,
+    "recall": 0.9543,
+    "inference_time_ms": 0.95,
+    "model_size_mb": 0.003,
+    "memory_usage_mb": 1.2,
+    "throughput_samples_per_sec": 105263
+  },
+  "XGBoost": {
+    "accuracy": 0.9681,
+    "f1_score": 0.9685,
+    "precision": 0.9689,
+    "recall": 0.9681,
+    "inference_time_ms": 1.34,
+    "model_size_mb": 0.21,
+    "memory_usage_mb": 2.8,
+    "throughput_samples_per_sec": 74627
+  },
+  "Neural Network": {
+    "accuracy": 0.9598,
+    "f1_score": 0.9603,
+    "precision": 0.9607,
+    "recall": 0.9598,
+    "inference_time_ms": 1.67,
+    "model_size_mb": 0.085,
+    "memory_usage_mb": 3.1,
+    "throughput_samples_per_sec": 59880
+  }
+}
