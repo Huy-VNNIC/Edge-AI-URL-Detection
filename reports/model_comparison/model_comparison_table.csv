@@ -1,0 +1,6 @@
+Model,Accuracy (%),F1-Score,Inference Time (ms),Model Size (MB),Memory Usage (MB),Throughput (samples/sec)
+SVM,99.89,0.9989,2.00,0.25,0.45,12328.4
+Random Forest,100.00,1.0000,36.94,0.55,53.42,262945.9
+Logistic Regression,100.00,1.0000,2.36,0.00,13.30,1398705.7
+XGBoost,100.00,1.0000,7.53,0.09,8.12,1283052.8
+Neural Network,100.00,1.0000,2.53,0.13,19.62,659777.4

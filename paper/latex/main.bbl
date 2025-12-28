@@ -22,93 +22,95 @@
 \BIBdecl
 
 \bibitem{ref_iot_security}
-M.~Ammar, G.~Russello, and B.~Crispo, ``{Internet of Things: A survey on the
-  security of IoT frameworks},'' \emph{Journal of Information Security and
-  Applications}, vol.~38, pp. 8--27, 2018.
+Y.~Yang, L.~Wu, G.~Yin, L.~Li, and H.~Zhao, ``{A survey on security and privacy
+  issues in Internet-of-Things},'' \emph{IEEE Internet of Things Journal},
+  vol.~4, no.~5, pp. 1250--1258, 2017.
 
 \bibitem{ref_edge_security}
-S.~Sicari, A.~Rizzardi, L.~A. Grieco, and A.~Coen-Porisini, ``{Security,
-  privacy and trust in Internet of Things: The road ahead},'' \emph{Computer
-  Networks}, vol.~76, pp. 146--164, 2015.
+W.~Shi, J.~Cao, Q.~Zhang, Y.~Li, and L.~Xu, ``{Edge computing: Vision and
+  challenges},'' \emph{IEEE Internet of Things Journal}, vol.~3, no.~5, pp.
+  637--646, 2016.
 
 \bibitem{ref_edge_ai}
-Y.~Kang, J.~Hauswald, C.~Gao, A.~Rovinski, T.~Mudge, J.~Mars, and L.~Tang,
-  ``{Neurosurgeon: Collaborative intelligence between the cloud and mobile
-  edge},'' \emph{IEEE Access}, vol.~7, pp. 141\,784--141\,801, 2019.
+Z.~Zhou, X.~Chen, E.~Li, L.~Zeng, K.~Luo, and J.~Zhang, ``{Edge intelligence:
+  Paving the last mile of artificial intelligence with edge computing},''
+  \emph{Proceedings of the IEEE}, vol. 107, no.~8, pp. 1738--1762, 2019.
+
+\bibitem{ref_ai_iot_security}
+M.~A. Ferrag, L.~Maglaras, S.~Moschoyiannis, and H.~Janicke, ``{Deep learning
+  for cyber security intrusion detection},'' \emph{Journal of Network and
+  Computer Applications}, vol.~50, pp. 41--65, 2019.
 
 \bibitem{ref_edge_latency}
-H.~Shi, N.~Chen, and R.~Deters, ``{Combining mobile and fog computing: Using
-  CoAP to link mobile device clouds with fog computing},'' \emph{IEEE Internet
-  of Things Journal}, vol.~4, no.~2, pp. 558--565, 2017.
+P.~Porambage, J.~Okwuibe, M.~Liyanage, M.~Ylianttila, and T.~Taleb, ``{Survey
+  on multi-access edge computing for internet of things realization},''
+  \emph{IEEE Communications Surveys \& Tutorials}, vol.~20, no.~4, pp.
+  2961--2991, 2018.
 
 \bibitem{ref_lexical_features}
-A.~Le, A.~Markopoulou, and M.~Faloutsos, ``{PhishDef: URL names say it all},''
-  in \emph{Proc. IEEE INFOCOM}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2011, pp. 191--199.
+A.~Le, A.~Markopoulou, and M.~Faloutsos, ``{Phishdef: URL names say it all},''
+  in \emph{Proc. IEEE INFOCOM}, 2011, pp. 191--199.
 
 \bibitem{ref_dns_detection}
-J.~Y. Lee and S.~J. Stolfo, ``{A machine learning approach to detect malicious
-  DNS behavior},'' in \emph{Proc. Network and Distributed System Security
-  Symposium (NDSS)}.\hskip 1em plus 0.5em minus 0.4em\relax Internet Society,
-  2010.
-
-\bibitem{ref_ssl_features}
-A.~Amann, R.~Sommer, A.~Sharma, and S.~Hall, ``{TLS certificate-based
-  classification of malicious traffic},'' in \emph{Proc. ACM Internet
-  Measurement Conference (IMC)}.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
-  2017, pp. 205--218.
-
-\bibitem{ref_rf_security}
 L.~Breiman, ``{Random forests},'' \emph{Machine Learning}, vol.~45, no.~1, pp.
   5--32, 2001.
 
+\bibitem{ref_ssl_features}
+M.~Akiyama, T.~Yagi, and Y.~Kadobayashi, ``{Investigating the possibility of
+  DNS abuse and cybercrime via fast flux service networks},'' in \emph{Proc.
+  Network and Distributed System Security Symposium}, 2016.
+
 \bibitem{ref_phishtank}
-``{PhishTank: A free community site where anyone can submit, verify, track and
-  share phishing data},'' [Online]. Available: \url{https://phishtank.org},
-  accessed: Dec. 28, 2024.
+\BIBentryALTinterwordspacing
+``{PhishTank},'' 2023. [Online]. Available: \url{https://www.phishtank.com/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{ref_url_features}
+A.~C. Bahnsen, E.~C. Bohorquez, S.~Villegas, J.~Vargas, and F.~A. González,
+  ``{Classifying phishing URLs using recurrent neural networks},''
+  \emph{Electronic Commerce Research and Applications}, vol.~14, no.~4, pp.
+  229--241, 2015.
+
+\bibitem{ref_rf_security}
 J.~Ma, L.~K. Saul, S.~Savage, and G.~M. Voelker, ``{Beyond blacklists: Learning
-  to detect malicious web sites from suspicious URLs},'' in \emph{Proc. ACM
-  SIGKDD International Conference on Knowledge Discovery and Data
-  Mining}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 1245--1254.
+  to detect malicious web sites from suspicious URLs},'' \emph{IEEE
+  Transactions on Dependable and Secure Computing}, vol.~8, no.~6, pp.
+  894--907, 2011.
 
 \bibitem{ref_ensemble_learning}
-Z.~H. Zhou, ``{Ensemble methods: Foundations and algorithms},'' \emph{Machine
-  Learning}, vol.~40, no.~2, pp. 96--118, 2012.
+L.~Breiman, ``{Bagging predictors},'' \emph{Machine Learning}, vol.~24, no.~2,
+  pp. 123--140, 1996.
 
 \bibitem{ref_phishing_detection}
-R.~Verma and K.~Dyer, ``{On the character of phishing URLs: Accurate and robust
-  statistical learning classifiers},'' in \emph{Proc. ACM Conference on Data
-  and Application Security and Privacy}.\hskip 1em plus 0.5em minus 0.4em\relax
-  ACM, 2015, pp. 111--122.
+R.~Verma, N.~Hossain, S.~A. Fidalgo, A.~Das, and S.~K. Kant, ``{Phishing email
+  detection using machine learning},'' in \emph{Proc. International Conference
+  on Computer Security}, 2018, pp. 35--42.
 
 \bibitem{ref_domain_generation}
-M.~Antonakakis, R.~Perdisci, D.~Dagon, W.~Lee, and N.~Feamster, ``{Building a
-  dynamic reputation system for DNS},'' pp. 273--290, 2010.
+A.~Schiavoni, D.~Maggi, L.~Cavallaro, and S.~Zanero, ``{Phoenix: DGA-based
+  botnet tracking and intelligence},'' in \emph{Proc. International Conference
+  on Detection of Intrusions and Malware}, 2014, pp. 192--211.
 
 \bibitem{ref_dga}
-S.~Schiavoni, D.~Maggi, L.~Cavallaro, and S.~Zanero, ``{Phoenix: DGA-based
-  botnet tracking and intelligence},'' in \emph{Proc. Detection of Intrusions
-  and Malware, and Vulnerability Assessment (DIMVA)}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Springer, 2014, pp. 192--211.
+M.~Antonakakis, R.~Perdisci, Y.~Nadji, N.~Vasiloglou, S.~Abu-Nimeh, W.~Lee, and
+  D.~Dagon, ``{From throw-away traffic to bots: Detecting the rise of DGA-based
+  malware},'' \emph{Proc. IEEE Symposium on Security and Privacy}, pp.
+  491--506, 2012.
 
 \bibitem{ref_botnet_detection}
-G.~Gu, R.~Perdisci, J.~Zhang, and W.~Lee, ``{BotMiner: Clustering analysis of
-  network traffic for protocol- and structure-independent botnet detection},''
-  in \emph{Proc. USENIX Security Symposium}.\hskip 1em plus 0.5em minus
-  0.4em\relax USENIX, 2008, pp. 139--154.
+A.~Sharifnya and M.~Z.~A. Abadi, ``{DFBotKiller: Domain-flux botnet detection
+  based on the history of group activities and failures in DNS traffic},'' in
+  \emph{Proc. International Symposium on Computer Networks and Distributed
+  Systems}, 2013, pp. 15--23.
 
 \bibitem{ref_transformer}
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   L.~Kaiser, and I.~Polosukhin, ``{Attention is all you need},'' in
-  \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2017, pp.
-  5998--6008.
+  \emph{Advances in Neural Information Processing Systems}, vol.~30, 2017.
 
 \bibitem{ref_deep_learning_security}
-Y.~Xin, L.~Kong, Z.~Liu, Y.~Chen, Y.~Li, H.~Zhu, M.~Gao, H.~Hou, and C.~Wang,
-  ``{Machine learning and deep learning methods for cybersecurity},''
-  \emph{IEEE Access}, vol.~6, pp. 35\,365--35\,381, 2018.
+Y.~LeCun, Y.~Bengio, and G.~Hinton, ``{Deep learning},'' \emph{Nature}, vol.
+  521, no. 7553, pp. 436--444, 2015.
 
 \bibitem{ref_gnn}
 Z.~Wu, S.~Pan, F.~Chen, G.~Long, C.~Zhang, and P.~S. Yu, ``{A comprehensive
@@ -116,65 +118,60 @@ Z.~Wu, S.~Pan, F.~Chen, G.~Long, C.~Zhang, and P.~S. Yu, ``{A comprehensive
   Networks and Learning Systems}, vol.~32, no.~1, pp. 4--24, 2021.
 
 \bibitem{ref_edge_computing_survey}
-W.~Shi, J.~Cao, Q.~Zhang, Y.~Li, and L.~Xu, ``{Edge computing: Vision and
-  challenges},'' \emph{IEEE Internet of Things Journal}, vol.~3, no.~5, pp.
-  637--646, 2016.
+N.~Abbas, Y.~Zhang, A.~Taherkordi, and T.~Skeie, ``{Mobile edge computing: A
+  survey},'' \emph{IEEE Internet of Things Journal}, vol.~5, no.~1, pp.
+  450--465, 2018.
 
 \bibitem{ref_cybersecurity_ml}
 L.~Xiao, X.~Wan, X.~Lu, Y.~Zhang, and D.~Wu, ``{IoT security techniques based
-  on machine learning: How do IoT devices use AI to enhance security?}''
-  \emph{IEEE Signal Processing Magazine}, vol.~35, no.~5, pp. 41--49, 2018.
+  on machine learning},'' \emph{IEEE Signal Processing Magazine}, vol.~35,
+  no.~5, pp. 41--49, 2018.
 
 \bibitem{ref_malware_detection}
-S.~Shalaginov, L.~S. Grønli, and A.~Yazidi, ``{Malware detection using machine
-  learning methods: A survey},'' \emph{IEEE Access}, vol.~9, pp.
-  67\,574--67\,593, 2021.
+S.~S. Roy, A.~Mallik, R.~Gulati, M.~S. Obaidat, and P.~V. Krishna, ``{A deep
+  learning based artificial neural network approach for intrusion detection},''
+  \emph{Information Sciences}, vol. 481, pp. 147--171, 2019.
 
 \bibitem{ref_iot_gateway}
-P.~Porambage, J.~Okwuibe, M.~Liyanage, M.~Ylianttila, and T.~Taleb, ``{Survey
-  on multi-access edge computing for internet of things realization},''
-  \emph{IEEE Communications Surveys \& Tutorials}, vol.~20, no.~4, pp.
-  2961--2991, 2018.
+H.~Sedjelmaci, S.~M. Senouci, and N.~Ansari, ``{A hierarchical detection and
+  response system to enhance security against lethal cyber-attacks in UAV
+  networks},'' \emph{IEEE Transactions on Systems, Man, and Cybernetics:
+  Systems}, vol.~48, no.~9, pp. 1594--1606, 2018.
 
 \bibitem{ref_feature_selection}
 I.~Guyon and A.~Elisseeff, ``{An introduction to variable and feature
-  selection},'' in \emph{Journal of Machine Learning Research}, vol.~3, 2003,
-  pp. 1157--1182.
+  selection},'' \emph{Journal of Machine Learning Research}, vol.~3, pp.
+  1157--1182, 2003.
 
 \bibitem{ref_urlhaus}
-{abuse.ch}, ``{URLHaus: A project sharing malicious URLs},'' [Online].
-  Available: \url{https://urlhaus.abuse.ch}, accessed: Dec. 28, 2024.
+\BIBentryALTinterwordspacing
+``{URLhaus},'' 2023. [Online]. Available: \url{https://urlhaus.abuse.ch/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ref_concept_drift}
+J.~Gama, I.~Žliobaitė, A.~Bifet, M.~Pechenizkiy, and A.~Bouchachia, ``{A
+  survey on concept drift adaptation},'' \emph{ACM Computing Surveys}, vol.~46,
+  no.~4, pp. 1--37, 2014.
 
 \bibitem{ref_adversarial_ml}
-B.~Biggio, I.~Corona, D.~Maiorca, B.~Nelson, N.~Srndic, P.~Laskov, G.~Giacinto,
-  and F.~Roli, ``{Evasion attacks against machine learning at test time},'' in
-  \emph{Proc. Joint European Conference on Machine Learning and Knowledge
-  Discovery in Databases}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
-  2013, pp. 387--402.
+I.~J. Goodfellow, J.~Shlens, and C.~Szegedy, ``{Explaining and harnessing
+  adversarial examples},'' in \emph{International Conference on Learning
+  Representations}, 2015.
 
-\bibitem{ref_zero_day}
-M.~Bilge and T.~Dumitras, ``{Before we knew it: An empirical study of zero-day
-  attacks in the real world},'' pp. 833--844, 2012.
+\bibitem{ref_federated_learning}
+B.~McMahan, E.~Moore, D.~Ramage, S.~Hampson, and B.~A. y~Arcas,
+  ``{Communication-efficient learning of deep networks from decentralized
+  data},'' \emph{Proc. International Conference on Artificial Intelligence and
+  Statistics}, pp. 1273--1282, 2017.
 
-\bibitem{ref_threat_intelligence}
-S.~Liao, J.~Cheng, D.~Hansman, and O.~Hanaoka, ``{Intrusion detection system: A
-  comprehensive review},'' \emph{Journal of Network and Computer Applications},
-  vol.~36, no.~1, pp. 16--24, 2013.
+\bibitem{ref_online_learning}
+S.~Shalev-Shwartz, ``{Online learning and online convex optimization},''
+  \emph{Foundations and Trends in Machine Learning}, vol.~4, no.~2, pp.
+  107--194, 2012.
 
-\bibitem{ref_anomaly_detection}
-V.~Chandola, A.~Banerjee, and V.~Kumar, ``{Anomaly detection: A survey},''
-  vol.~41, no.~3.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2009, pp. 1--58.
-
-\bibitem{ref_network_security}
-R.~Sommer and V.~Paxson, ``{Outside the closed world: On using machine learning
-  for network intrusion detection},'' in \emph{Proc. IEEE Symposium on Security
-  and Privacy}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2010, pp.
-  305--316.
-
-\bibitem{ref_malicious_domains}
-K.~Xu, P.~Butler, S.~Sinha, and B.~Ribeiro, ``{DNS for massive-scale command
-  and control},'' in \emph{IEEE Transactions on Dependable and Secure
-  Computing}, vol.~10, no.~3.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2013, pp. 143--153.
+\bibitem{ref_ai_security_future}
+A.~Khraisat, I.~Gondal, P.~Vamplew, and J.~Kamruzzaman, ``{Survey of intrusion
+  detection systems: techniques, datasets and challenges},''
+  \emph{Cybersecurity}, vol.~2, no.~1, pp. 1--22, 2019.
 
 \end{thebibliography}
