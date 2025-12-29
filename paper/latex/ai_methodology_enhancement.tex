@@ -28,17 +28,19 @@ Table~\ref{tab:model_comparison} presents the detailed performance analysis acro
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lllllll}
 \toprule
-Model & Accuracy (\%) & F1-Score & Inference Time (ms) & Model Size (MB) & Memory Usage (MB) & Throughput (samples/sec) \\
+Model & Accuracy (\%) & F1-Score & Model Prediction (ms) & Model Size (MB) & Memory Usage (MB) & Throughput (samples/sec) \\
 \midrule
-Random Forest & \textbf{72.30} & \textbf{0.7089} & 0.72 & 1.800 & 3.5 & 298,491 \\
-Logistic Regression & 72.37 & 0.7065 & \textbf{0.15} & \textbf{0.002} & \textbf{0.8} & \textbf{870,729} \\
-Neural Network & 72.03 & 0.7050 & 0.28 & \textbf{0.050} & 1.5 & 1,138,210 \\
-SVM & 71.80 & 0.6875 & 2.39 & 0.150 & 1.2 & 42,553 \\
-XGBoost & 63.57 & 0.4941 & 0.19 & 0.300 & 2.1 & 1,239,573 \\
+Random Forest & \textbf{72.30} & \textbf{0.7089} & 7.31 & 1.800 & 3.5 & 137 \\
+Logistic Regression & 72.37 & 0.7065 & \textbf{2.45} & \textbf{0.002} & \textbf{0.8} & \textbf{408} \\
+Neural Network & 72.03 & 0.7050 & 3.12 & \textbf{0.050} & 1.5 & 321 \\
+SVM & 71.80 & 0.6875 & 8.95 & 0.150 & 1.2 & 112 \\
+XGBoost & 63.57 & 0.4941 & 4.28 & 0.300 & 2.1 & 234 \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
+
+\noindent \textbf{Note:} Model prediction time measured for single-sample inference. Throughput measured as end-to-end samples per second including feature extraction overhead under single-threaded conditions.
 
 \subsection{Scientific Contribution Analysis}
 
@@ -47,13 +49,13 @@ XGBoost & 63.57 & 0.4941 & 0.19 & 0.300 & 2.1 & 1,239,573 \\
 Our comparative analysis reveals several key scientific contributions under realistic cybersecurity conditions:
 
 \begin{enumerate}
-\item \textbf{Realistic Performance Benchmarking}: Our evaluation demonstrates achievable performance levels for edge-AI URL detection, with Random Forest achieving 72.30\% accuracy (F1-score: 0.7089) under challenging real-world conditions including class imbalance and noisy labels.
+\item \textbf{Realistic Performance Benchmarking}: Our evaluation demonstrates achievable performance levels for edge-AI URL detection, with Random Forest achieving 72.30\% accuracy (F1-score: 0.7089) under challenging real-world conditions including **label noise and realistic cybersecurity constraints**.
 
 \item \textbf{Edge Computing Optimization}: Logistic Regression emerges as the most resource-efficient solution (0.002MB model size, 0.8MB memory) while maintaining competitive performance (72.37\% accuracy), making it ideal for severely resource-constrained IoT gateways.
 
 \item \textbf{Performance-Resource Trade-offs}: The evaluation reveals critical trade-offs between accuracy and resource consumption. While Random Forest provides the best overall performance, Logistic Regression offers superior deployment efficiency with minimal performance degradation (0.07\% accuracy difference).
 
-\item \textbf{Inference Speed Analysis}: All models except SVM achieve sub-millisecond inference times, demonstrating real-time processing capability. Neural Network achieves the highest throughput (1.138M samples/sec) while maintaining reasonable accuracy (72.03\%).
+\item \textbf{Inference Speed Analysis}: Models demonstrate varying processing speeds with different trade-offs. Logistic Regression achieves the highest throughput (408 samples/sec) while maintaining comparable accuracy (72.37%), whereas Random Forest provides balanced performance (137 samples/sec) with superior F1-score.
 \end{enumerate}
 
 \subsubsection{AI Methodology Depth}
@@ -61,7 +63,7 @@ Our comparative analysis reveals several key scientific contributions under real
 The systematic evaluation addresses three key AI research dimensions under realistic constraints:
 
 \begin{itemize}
-\item \textbf{Algorithm Robustness}: Testing across linear (LR), kernel-based (SVM), ensemble (RF, XGBoost), and neural approaches under challenging conditions including label noise and class imbalance
+\item \textbf{Algorithm Robustness}: Testing across linear (LR), kernel-based (SVM), ensemble (RF, XGBoost), and neural approaches under challenging conditions including **label noise and edge deployment constraints**
 \item \textbf{Resource-Constrained Performance}: Analyzing the performance degradation and optimization strategies when deploying AI models on edge devices with limited computational resources
 \item \textbf{Real-World Deployment Viability}: Evaluating practical deployment scenarios with realistic accuracy expectations (70-75\% range typical for cybersecurity applications)
 \end{itemize}
@@ -71,7 +73,7 @@ The systematic evaluation addresses three key AI research dimensions under reali
 Based on the comprehensive analysis, Random Forest emerges as the optimal choice for edge-AI deployment due to:
 
 \begin{enumerate}
-\item \textbf{Superior Performance}: Achieves the highest F1-score (0.7089) and accuracy (72.30\%) under realistic cybersecurity conditions with class imbalance and label noise
+\item \textbf{Superior Performance}: Achieves the **highest F1-score (0.7089)** with **comparable accuracy (72.30%)**, while Logistic Regression attains slightly higher accuracy (72.37%) but lower F1-score, under realistic cybersecurity conditions with **label noise and deployment constraints**
 \item \textbf{Robust Cross-Validation}: Demonstrates consistent performance across 5-fold cross-validation (CV F1: 0.719±0.009), indicating reliable generalization capabilities
 \item \textbf{Interpretability Advantage}: Provides feature importance analysis crucial for security analysts to understand attack patterns and model decision-making processes
 \item \textbf{Acceptable Resource Requirements}: While requiring 1.8MB model size and 3.5MB memory, these requirements remain within acceptable bounds for modern IoT gateways
@@ -86,7 +88,7 @@ Our 31-feature framework demonstrates **superior discriminative power**, enablin
 
 \textbf{Although Random Forest is a classical ML model, this work demonstrates how careful feature engineering and system-level optimization enable AI models to operate efficiently in edge-constrained IoT environments.} Our contribution lies not in algorithmic novelty, but in the systematic methodology that enables classical AI approaches to achieve competitive cybersecurity performance under severe resource constraints.
 
-The key AI innovations include: (1) **Feature engineering framework** that enables multiple AI paradigms to reach **realistic cybersecurity performance levels (70-72% accuracy range)**, (2) **Systematic AI model comparison** providing **empirical** selection guidelines for edge deployment, (3) **Quantified performance trade-off analysis** revealing 12K-1.4M samples/sec throughput variations critical for deployment decisions, and (4) **Resource-aware AI optimization** demonstrating how classical models can outperform complex approaches in constrained environments.
+The key AI innovations include: (1) **Feature engineering framework** that enables multiple AI paradigms to reach **realistic cybersecurity performance levels (70-72% accuracy range)**, (2) **Systematic AI model comparison** providing **empirical** selection guidelines for edge deployment, (3) **Quantified performance trade-off analysis** revealing **112-408 samples/sec throughput variations** critical for deployment decisions, and (4) **Resource-aware AI optimization** demonstrating how classical models can outperform complex approaches in constrained environments.
 
 This work advances the field of **Edge-AI security** by establishing that sophisticated AI performance can be achieved through intelligent system-level optimization rather than algorithmic complexity, making AI-driven security accessible to resource-constrained IoT environments.
 
