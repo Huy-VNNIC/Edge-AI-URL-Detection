@@ -49,7 +49,7 @@ XGBoost & 63.57 & 0.4941 & 4.28 & 0.300 & 2.1 & 234 \\
 Our comparative analysis reveals several key scientific contributions under realistic cybersecurity conditions:
 
 \begin{enumerate}
-\item \textbf{Realistic Performance Benchmarking}: Our evaluation demonstrates achievable performance levels for edge-AI URL detection, with Random Forest achieving 72.30\% accuracy (F1-score: 0.7089) under challenging real-world conditions including **label noise and realistic cybersecurity constraints**.
+\item \textbf{Realistic Performance Benchmarking}: Our evaluation demonstrates achievable performance levels for edge-AI URL detection, with Random Forest achieving 72.30\% accuracy (F1-score: 0.7089) under challenging real-world conditions including \textbf{label noise and realistic cybersecurity constraints}.
 
 \item \textbf{Edge Computing Optimization}: Logistic Regression emerges as the most resource-efficient solution (0.002MB model size, 0.8MB memory) while maintaining competitive performance (72.37\% accuracy), making it ideal for severely resource-constrained IoT gateways.
 
@@ -63,7 +63,7 @@ Our comparative analysis reveals several key scientific contributions under real
 The systematic evaluation addresses three key AI research dimensions under realistic constraints:
 
 \begin{itemize}
-\item \textbf{Algorithm Robustness}: Testing across linear (LR), kernel-based (SVM), ensemble (RF, XGBoost), and neural approaches under challenging conditions including **label noise and edge deployment constraints**.
+\item \textbf{Algorithm Robustness}: Testing across linear (LR), kernel-based (SVM), ensemble (RF, XGBoost), and neural approaches under challenging conditions including \textbf{label noise and edge deployment constraints}.
 \item \textbf{Resource-Constrained Performance}: Analyzing the performance degradation and optimization strategies when deploying AI models on edge devices with limited computational resources.
 \item \textbf{Real-World Deployment Viability}: Evaluating practical deployment scenarios with realistic accuracy expectations (70-75\% range typical for cybersecurity applications).
 \end{itemize}
@@ -73,28 +73,28 @@ The systematic evaluation addresses three key AI research dimensions under reali
 Based on the comprehensive analysis, Random Forest emerges as the optimal choice for edge-AI deployment due to:
 
 \begin{enumerate}
-\item \textbf{Superior Performance}: Achieves the **highest F1-score (0.7089)** with **comparable accuracy (72.30%)**, while Logistic Regression attains slightly higher accuracy (72.37%) but lower F1-score, under realistic cybersecurity conditions with **label noise and deployment constraints**.
+\item \textbf{Superior Performance}: Achieves the \textbf{highest F1-score (0.7089)} with \textbf{comparable accuracy (72.30\%)}, while Logistic Regression attains slightly higher accuracy (72.37\%) but lower F1-score, under realistic cybersecurity conditions with \textbf{label noise and deployment constraints}.
 \item \textbf{Robust Cross-Validation}: Demonstrates consistent performance across 5-fold cross-validation (CV F1: 0.719±0.009), indicating reliable generalization capabilities.
 \item \textbf{Interpretability Advantage}: Provides feature importance analysis crucial for security analysts to understand attack patterns and model decision-making processes.
 \item \textbf{Acceptable Resource Requirements}: While requiring 1.8MB model size and 3.5MB memory, these requirements remain within acceptable bounds for modern IoT gateways.
-\item \textbf{Real-time Processing}: Model prediction time of **7.31 ms** enables real-time URL analysis suitable for IoT gateway environments.
+\item \textbf{Real-time Processing}: Model prediction time of \textbf{7.31 ms} enables real-time URL analysis suitable for IoT gateway environments.
 \end{enumerate}
 
 \subsection{Feature Engineering Innovation}
 
-Our 31-feature framework demonstrates **superior discriminative power**, enabling multiple AI approaches to achieve **practically viable cybersecurity performance levels**. This validates the **experimental soundness** of our feature selection methodology and establishes an **empirical basis** for edge-optimized URL security systems.
+Our 31-feature framework demonstrates \textbf{superior discriminative power}, enabling multiple AI approaches to achieve \textbf{practically viable cybersecurity performance levels}. This validates the \textbf{experimental soundness} of our feature selection methodology and establishes an \textbf{empirical basis} for edge-optimized URL security systems.
 
 \subsection{AI Methodology Contribution Statement}
 
 \textbf{Although Random Forest is a classical ML model, this work demonstrates how careful feature engineering and system-level optimization enable AI models to operate efficiently in edge-constrained IoT environments.} Our contribution lies not in algorithmic novelty, but in the systematic methodology that enables classical AI approaches to achieve competitive cybersecurity performance under severe resource constraints.
 
-The key AI innovations include: (1) **Feature engineering framework** that enables multiple AI paradigms to reach **realistic cybersecurity performance levels (70-72% accuracy range)**, (2) **Systematic AI model comparison** providing **empirical** selection guidelines for edge deployment, (3) **Quantified performance trade-off analysis** revealing **112-408 samples/sec model-only throughput variations** critical for deployment decisions, and (4) **Resource-aware AI optimization** demonstrating how classical models can outperform complex approaches in constrained environments.
+The key AI innovations include: (1) \textbf{Feature engineering framework} that enables multiple AI paradigms to reach \textbf{realistic cybersecurity performance levels (70-72\% accuracy range)}, (2) \textbf{Systematic AI model comparison} providing \textbf{empirical} selection guidelines for edge deployment, (3) \textbf{Quantified performance trade-off analysis} revealing \textbf{112-408 samples/sec model-only throughput variations} critical for deployment decisions, and (4) \textbf{Resource-aware AI optimization} demonstrating how classical models can outperform complex approaches in constrained environments.
 
-This work advances the field of **Edge-AI security** by establishing that sophisticated AI performance can be achieved through intelligent system-level optimization rather than algorithmic complexity, making AI-driven security accessible to resource-constrained IoT environments.
+This work advances the field of \textbf{Edge-AI security} by establishing that sophisticated AI performance can be achieved through intelligent system-level optimization rather than algorithmic complexity, making AI-driven security accessible to resource-constrained IoT environments.
 
 \subsection{Feature Importance and Ablation Analysis}
 
-Figure~\ref{fig:feature_importance} presents the comprehensive feature importance analysis derived from our Random Forest model, revealing the quantitative contribution of each feature category to the AI decision-making process. This analysis directly addresses the critical question: **"Which features are truly necessary for AI-driven malicious URL detection?"**
+Figure~\ref{fig:feature_importance} presents the comprehensive feature importance analysis derived from our Random Forest model, revealing the quantitative contribution of each feature category to the AI decision-making process. This analysis directly addresses the critical question: \textbf{"Which features are truly necessary for AI-driven malicious URL detection?"}
 
 \begin{figure}[htbp]
 \centering
@@ -108,15 +108,15 @@ Figure~\ref{fig:feature_importance} presents the comprehensive feature importanc
 Our systematic analysis reveals the following quantitative contributions to AI classification performance, answering key research questions about feature necessity:
 
 \begin{itemize}
-\item \textbf{URL Lexical Features (51.5\% - ESSENTIAL)}: URL structure characteristics including length, entropy, digit ratio, and special character frequency constitute the primary discriminative factors. The dominance of lexical patterns validates that AI models can effectively detect malicious URLs primarily through structural analysis, making this category **absolutely critical** for edge deployment.
+\item \textbf{URL Lexical Features (51.5\% - ESSENTIAL)}: URL structure characteristics including length, entropy, digit ratio, and special character frequency constitute the primary discriminative factors. The dominance of lexical patterns validates that AI models can effectively detect malicious URLs primarily through structural analysis, making this category \textbf{absolutely critical} for edge deployment.
 
-\item \textbf{Domain Metadata Features (33.8\% - IMPORTANT)}: Domain registration information, age, TLD characteristics, and behavioral patterns provide substantial secondary contribution. This category is **highly valuable** but could be reduced in ultra-constrained environments while maintaining acceptable performance.
+\item \textbf{Domain Metadata Features (33.8\% - IMPORTANT)}: Domain registration information, age, TLD characteristics, and behavioral patterns provide substantial secondary contribution. This category is \textbf{highly valuable} but could be reduced in ultra-constrained environments while maintaining acceptable performance.
 
-\item \textbf{SSL/Security Features (8.8\% - COMPLEMENTARY)}: Certificate metadata and security-related attributes contribute meaningful but limited discriminative power. Analysis shows these features are **useful but not essential**, suggesting they can be omitted in severely resource-constrained deployments with minimal accuracy impact.
+\item \textbf{SSL/Security Features (8.8\% - COMPLEMENTARY)}: Certificate metadata and security-related attributes contribute meaningful but limited discriminative power. Analysis shows these features are \textbf{useful but not essential}, suggesting they can be omitted in severely resource-constrained deployments with minimal accuracy impact.
 
-\item \textbf{DNS Features (5.9\% - OPTIONAL)}: Query behavior and DNS-level characteristics provide minimal but consistent contribution. These features are **least critical** and could be the first candidates for removal in feature reduction scenarios.
+\item \textbf{DNS Features (5.9\% - OPTIONAL)}: Query behavior and DNS-level characteristics provide minimal but consistent contribution. These features are \textbf{least critical} and could be the first candidates for removal in feature reduction scenarios.
 \end{itemize}
 
-**Key AI Insight**: This quantitative analysis demonstrates that AI models can achieve **realistic cybersecurity performance** using primarily URL lexical (51.5\%) and domain metadata (33.8\%) features, **totaling 85.3\% of the cumulative discriminative power**. DNS and SSL features, while contributing only 14.7\%, provide robustness against specific attack vectors.
+\textbf{Key AI Insight}: This quantitative analysis demonstrates that AI models can achieve \textbf{realistic cybersecurity performance} using primarily URL lexical (51.5\%) and domain metadata (33.8\%) features, \textbf{totaling 85.3\% of the cumulative discriminative power}. DNS and SSL features, while contributing only 14.7\%, provide robustness against specific attack vectors.
 
-\textbf{Practical Implications}: For ultra-low-power edge devices, our analysis suggests a **two-tier deployment strategy**: (1) Core model with URL + Domain features (85.3% contribution) for primary detection, (2) Enhanced model with full feature set for comprehensive analysis when resources permit.
+\textbf{Practical Implications}: For ultra-low-power edge devices, our analysis suggests a \textbf{two-tier deployment strategy}: (1) Core model with URL + Domain features (85.3\% contribution) for primary detection, (2) Enhanced model with full feature set for comprehensive analysis when resources permit.

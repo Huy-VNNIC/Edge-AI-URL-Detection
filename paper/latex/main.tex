@@ -16,13 +16,21 @@
 \title{Edge-AI Malicious Domain and URL Detection for IoT Gateway Security: A Lightweight Random Forest Approach}
 
 \author{
-\IEEEauthorblockN{Phan Luu Tung\IEEEauthorrefmark{1}, Nguyen Nhat Huy\IEEEauthorrefmark{1}, Nhu Gia Nguyen \IEEEauthorrefmark{1}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science\\
-International School\\
-Duy Tan University\\
-Da Nang 550000, Vietnam\\
-Email: phanluutung@dtu.edu.vn}
+\IEEEauthorblockN{
+Phan Luu Tung\IEEEauthorrefmark{1},
+Nguyen Nhat Huy\IEEEauthorrefmark{2},
+Nguyen Gia Nhu\IEEEauthorrefmark{1,*},
+Tran Minh Bao\IEEEauthorrefmark{3}
 }
+\IEEEauthorblockA{
+\IEEEauthorrefmark{1}School of Computer Science and Artificial Intelligence, Duy Tan University, Da Nang, Viet Nam\\
+\IEEEauthorrefmark{2}International School, Duy Tan University, Da Nang 550000, Viet Nam\\
+\IEEEauthorrefmark{3}HCMC University of Industry and Trade, Ho Chi Minh City, Viet Nam\\
+\IEEEauthorrefmark{*}Corresponding author: nguyengianhu@duytan.edu.vn
+}
+}
+
+
 
 \begin{document}
 
@@ -34,7 +42,7 @@ The rapid growth of Internet of Things (IoT) deployments has significantly incre
 
 We evaluated five machine learning algorithms (Random Forest, Logistic Regression, SVM, XGBoost, Neural Networks) using a 31-dimensional feature set combining URL lexical analysis, DNS behavior patterns, SSL certificate metadata, and domain registration information. Random Forest achieved the best balance of performance and efficiency with 72.30\% accuracy and 0.7089 F1-score while meeting strict edge deployment constraints.
 
-Experimental evaluation using 100,000 URLs revealed significant performance variations across algorithms. Accuracy ranged from 63.6\% to 72.4\% with F1-scores between 0.494 and 0.709, while **model-only throughput** varied from **112 to 408 samples per second**. Feature importance analysis showed URL structure characteristics contribute 51.5\% to classification decisions and domain metadata accounts for 33.8\%. The Random Forest implementation requires 3.5 MB memory and achieves **10.50 ms end-to-end offline latency (including feature extraction and model prediction)**, demonstrating practical feasibility for IoT gateway deployment.
+Experimental evaluation using 100,000 URLs revealed significant performance variations across algorithms. Accuracy ranged from 63.6\% to 72.4\% with F1-scores between 0.494 and 0.709, while \textbf{model-only throughput} varied from \textbf{112 to 408 samples per second}. Feature importance analysis showed URL structure characteristics contribute 51.5\% to classification decisions and domain metadata accounts for 33.8\%. The Random Forest implementation requires 3.5 MB memory and achieves \textbf{10.50 ms end-to-end offline latency (including feature extraction and model prediction)}, demonstrating practical feasibility for IoT gateway deployment.
 \end{abstract}
 
 % Keywords
@@ -53,18 +61,18 @@ Recent advances in Artificial Intelligence (AI) and machine learning have enable
 
 Recent advances in edge computing and lightweight machine learning have enabled security mechanisms to be deployed closer to data sources \cite{ref_edge_ai}. Edge-AI approaches allow real-time analysis while reducing latency and preserving data locality. However, designing accurate and efficient detection systems for resource-constrained edge devices remains challenging. Deep learning models, while powerful, often incur high computational and memory overhead, limiting their practicality for edge deployment \cite{ref_edge_latency}.
 
-In this paper, we propose a comprehensive Edge-AI-based malicious domain and URL detection framework with systematic artificial intelligence methodology evaluation specifically designed for IoT gateway environments. The system employs rigorous comparison of five AI approaches to establish **empirical basis**: Random Forest \cite{ref_rf_security}, Logistic Regression, Support Vector Machine (SVM), Extreme Gradient Boosting (XGBoost), and Neural Networks. Our hybrid feature extraction strategy integrates URL lexical features \cite{ref_lexical_features}, DNS query behavior \cite{ref_dns_detection}, SSL certificate metadata \cite{ref_ssl_features}, and domain registration information into a 31-dimensional framework that enables **practically viable** AI classification performance suitable for cybersecurity applications.
+In this paper, we propose a comprehensive Edge-AI-based malicious domain and URL detection framework with systematic artificial intelligence methodology evaluation specifically designed for IoT gateway environments. The system employs rigorous comparison of five AI approaches to establish \textbf{empirical basis}: Random Forest \cite{ref_rf_security}, Logistic Regression, Support Vector Machine (SVM), Extreme Gradient Boosting (XGBoost), and Neural Networks. Our hybrid feature extraction strategy integrates URL lexical features \cite{ref_lexical_features}, DNS query behavior \cite{ref_dns_detection}, SSL certificate metadata \cite{ref_ssl_features}, and domain registration information into a 31-dimensional framework that enables \textbf{practically viable} AI classification performance suitable for cybersecurity applications.
 
-Although Random Forest is a classical ML model, this work demonstrates how careful feature engineering and system-level optimization enable AI models to operate efficiently in edge-constrained IoT environments. The comprehensive AI evaluation reveals significant performance trade-offs (**112-408 samples/sec model-only throughput variation**) critical for informed edge deployment decisions. The system is fully containerized and exposed via a RESTful API to support real-time AI-driven threat detection.
+Although Random Forest is a classical ML model, this work demonstrates how careful feature engineering and system-level optimization enable AI models to operate efficiently in edge-constrained IoT environments. The comprehensive AI evaluation reveals significant performance trade-offs (\textbf{112-408 samples/sec model-only throughput variation}) critical for informed edge deployment decisions. The system is fully containerized and exposed via a RESTful API to support real-time AI-driven threat detection.
 
-**Research Gap.** While malicious URL and domain detection has been extensively studied using lexical, DNS, and learning-based approaches, practical deployment on IoT gateways remains insufficiently addressed. Specifically, existing works suffer from three critical limitations: (i) **inadequate deployment-level evaluation** - many studies focus on offline predictive performance without reporting deployment-relevant metrics such as memory footprint, feature extraction overhead, and end-to-end latency/throughput under realistic edge hardware constraints, (ii) **inconsistent multi-model comparison** - different studies evaluate single models or model families using different datasets, feature sets, and measurement protocols, making it difficult to derive actionable model-selection guidelines for resource-constrained environments, and (iii) **insufficient feature necessity analysis** - while heterogeneous feature sets combining URL lexical, DNS behavioral, SSL metadata, and WHOIS information are commonly proposed, there is limited quantitative evidence on which feature groups are essential versus optional when computational resources and data availability are constrained at the gateway level. Therefore, there is a clear need for a systematic edge-AI pipeline with controlled multi-model comparison, quantified deployment trade-offs (accuracy vs. latency/memory/throughput), and evidence-based feature importance analysis to enable informed design decisions for practical IoT gateway security systems.
+\textbf{Research Gap.} While malicious URL and domain detection has been extensively studied using lexical, DNS, and learning-based approaches, practical deployment on IoT gateways remains insufficiently addressed. Specifically, existing works suffer from three critical limitations: (i) \textbf{inadequate deployment-level evaluation} - many studies focus on offline predictive performance without reporting deployment-relevant metrics such as memory footprint, feature extraction overhead, and end-to-end latency/throughput under realistic edge hardware constraints, (ii) \textbf{inconsistent multi-model comparison} - different studies evaluate single models or model families using different datasets, feature sets, and measurement protocols, making it difficult to derive actionable model-selection guidelines for resource-constrained environments, and (iii) \textbf{insufficient feature necessity analysis} - while heterogeneous feature sets combining URL lexical, DNS behavioral, SSL metadata, and WHOIS information are commonly proposed, there is limited quantitative evidence on which feature groups are essential versus optional when computational resources and data availability are constrained at the gateway level. Therefore, there is a clear need for a systematic edge-AI pipeline with controlled multi-model comparison, quantified deployment trade-offs (accuracy vs. latency/memory/throughput), and evidence-based feature importance analysis to enable informed design decisions for practical IoT gateway security systems.
 
 The main contributions of this work are summarized as follows:
 \begin{itemize}
   \item We establish a systematic AI algorithm evaluation framework for edge computing environments, comparing five distinct approaches (Random Forest, Logistic Regression, SVM, XGBoost, Neural Networks) with comprehensive performance analysis across accuracy, latency, memory, and throughput dimensions.
-  \item We develop a 31-dimensional feature engineering methodology that enables AI approaches to achieve **practically viable** cybersecurity performance for edge deployment, with Random Forest achieving 72.30\% accuracy and 0.7089 F1-score, with quantified feature importance analysis revealing URL lexical features (51.5\%) and domain metadata (33.8\%) as primary contributors.
-  \item We demonstrate **empirically-grounded** AI model selection for edge deployment, showing Random Forest provides a **reasonable balance** of cybersecurity performance (72.30\% accuracy, 0.7089 F1-score), **acceptable** end-to-end latency (10.50ms), and deployment flexibility for resource-constrained IoT environments.
-  \item We conduct rigorous AI methodology evaluation including feature importance analysis, ablation studies, and comparative performance benchmarking, establishing an **experimental basis** for edge-optimized AI security systems with quantified deployment trade-offs.
+  \item We develop a 31-dimensional feature engineering methodology that enables AI approaches to achieve \textbf{practically viable} cybersecurity performance for edge deployment, with Random Forest achieving 72.30\% accuracy and 0.7089 F1-score, with quantified feature importance analysis revealing URL lexical features (51.5\%) and domain metadata (33.8\%) as primary contributors.
+  \item We demonstrate \textbf{empirically-grounded} AI model selection for edge deployment, showing Random Forest provides a \textbf{reasonable balance} of cybersecurity performance (72.30\% accuracy, 0.7089 F1-score), \textbf{acceptable} end-to-end latency (10.50ms), and deployment flexibility for resource-constrained IoT environments.
+  \item We conduct rigorous AI methodology evaluation including feature importance analysis, ablation studies, and comparative performance benchmarking, establishing an \textbf{experimental basis} for edge-optimized AI security systems with quantified deployment trade-offs.
 \end{itemize}
 
 % Related Work
@@ -141,7 +149,7 @@ Figure~\ref{fig:pipeline} illustrates the Random Forest inference pipeline optim
 \label{fig:pipeline}
 \end{figure}
 
-The model is trained using standard sampling techniques appropriate for the balanced dataset. Hyperparameters, including the number of trees and maximum tree depth, are selected to achieve a **reasonable balance** between accuracy and inference efficiency. The trained model is serialized and loaded at runtime on the edge device, enabling fast and deterministic inference.
+The model is trained using standard sampling techniques appropriate for the balanced dataset. Hyperparameters, including the number of trees and maximum tree depth, are selected to achieve a \textbf{reasonable balance} between accuracy and inference efficiency. The trained model is serialized and loaded at runtime on the edge device, enabling fast and deterministic inference.
 
 % Experimental Setup
 \section{Experimental Setup}
@@ -162,7 +170,7 @@ The dataset consists of 100,000 URLs collected from reputable sources including 
 
 Memory usage is monitored using process-level instrumentation to capture baseline memory consumption, model loading overhead, and inference-time memory usage.
 
-**Feature importance analysis** is conducted using Random Forest's **mean decrease in impurity (MDI)** method, which measures the average decrease in node impurity (Gini impurity) when a feature is used for splitting across all trees in the forest. The importance scores are normalized to sum to 1.0. **Category-level importance percentages** (URL lexical: 51.5%, domain metadata: 33.8%) are computed by summing the normalized importance scores of individual features belonging to each category, providing quantitative evidence for feature group contributions to the classification decisions.
+\textbf{Feature importance analysis} is conducted using Random Forest's \textbf{mean decrease in impurity (MDI)} method, which measures the average decrease in node impurity (Gini impurity) when a feature is used for splitting across all trees in the forest. The importance scores are normalized to sum to 1.0. \textbf{Category-level importance percentages} (URL lexical: 51.5\%, domain metadata: 33.8\%) are computed by summing the normalized importance scores of individual features belonging to each category, providing quantitative evidence for feature group contributions to the classification decisions.
 
 % Enhanced AI Methodology Section
 \input{ai_methodology_enhancement}
@@ -179,7 +187,7 @@ Figure~\ref{fig:ai_pipeline} illustrates the comprehensive AI-driven detection p
 \label{fig:ai_pipeline}
 \end{figure}
 
-Figure~\ref{fig:results} summarizes the performance evaluation results. The AI methodology evaluation demonstrates **practically viable** performance across multiple models, with Random Forest achieving the best overall performance (72.30\% accuracy, 0.7089 F1-score), validating our feature engineering approach and establishing **empirical evidence** for edge-AI security systems suitable for realistic cybersecurity applications.
+Figure~\ref{fig:results} summarizes the performance evaluation results. The AI methodology evaluation demonstrates \textbf{practically viable} performance across multiple models, with Random Forest achieving the best overall performance (72.30\% accuracy, 0.7089 F1-score), validating our feature engineering approach and establishing \textbf{empirical evidence} for edge-AI security systems suitable for realistic cybersecurity applications.
 
 % Note: You need to add your Figure 5 here
 \begin{figure}[!t]
@@ -234,7 +242,7 @@ These directions will enhance the robustness and adaptability of edge-deployed A
 
 IoT networks face increasing security challenges as malicious actors exploit vulnerabilities in edge devices and gateways. Traditional security approaches that depend on cloud-based analysis create latency bottlenecks and privacy concerns that are unacceptable in many IoT deployments. This study developed and evaluated an edge-based detection system that processes URLs locally at the gateway level.
 
-Our investigation compared five machine learning algorithms to identify the most suitable approach for resource-constrained environments. Random Forest emerged as the best choice, achieving 72.30\% accuracy with manageable computational requirements (3.5 MB memory, **10.50 ms end-to-end offline latency**). While this accuracy level reflects realistic cybersecurity performance rather than theoretical perfection, it provides adequate protection for practical IoT deployments.
+Our investigation compared five machine learning algorithms to identify the most suitable approach for resource-constrained environments. Random Forest emerged as the best choice, achieving 72.30\% accuracy with manageable computational requirements (3.5 MB memory, \textbf{10.50 ms end-to-end offline latency}). While this accuracy level reflects realistic cybersecurity performance rather than theoretical perfection, it provides adequate protection for practical IoT deployments.
 
 The key finding is that effective malicious URL detection can be implemented at the edge without sacrificing operational requirements. Feature analysis showed that URL structure characteristics (51.5\% importance) and domain metadata (33.8\% importance) provide sufficient discriminative power for classification. This insight allows practitioners to focus engineering efforts on the most impactful features.
 
