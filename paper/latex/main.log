@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.28)  29 DEC 2025 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.28)  29 DEC 2025 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,29 +334,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
+Underfull \hbox (badness 5446) in paragraph at lines 65--66
+[]\OT1/ptm/m/n/10 We de-velop a 31-dimensional fea-ture en-gi-neer-ing
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 65--66
+\OT1/ptm/m/n/10 **prac-ti-cally vi-able** cy-ber-se-cu-rity per-for-mance for
+ []
+
 <figure1_architecture.png, id=10, 1054.94125pt x 750.805pt>
 File: figure1_architecture.png Graphic file (type png)
 <use figure1_architecture.png>
-Package pdftex.def Info: figure1_architecture.png  used on input line 89.
+Package pdftex.def Info: figure1_architecture.png  used on input line 91.
 (pdftex.def)             Requested size: 252.0pt x 179.3491pt.
- [2 <./figure1_architecture.png>]
-<figure2_features.png, id=17, 1264.725pt x 741.77126pt>
+[2]
+<figure2_features.png, id=16, 1264.725pt x 741.77126pt>
 File: figure2_features.png Graphic file (type png)
 <use figure2_features.png>
-Package pdftex.def Info: figure2_features.png  used on input line 108.
+Package pdftex.def Info: figure2_features.png  used on input line 110.
 (pdftex.def)             Requested size: 252.0pt x 147.79701pt.
-<figure3_rf_pipeline.png, id=18, 846.16125pt x 322.20375pt>
+<figure3_rf_pipeline.png, id=17, 846.16125pt x 322.20375pt>
 File: figure3_rf_pipeline.png Graphic file (type png)
 <use figure3_rf_pipeline.png>
-Package pdftex.def Info: figure3_rf_pipeline.png  used on input line 137.
+Package pdftex.def Info: figure3_rf_pipeline.png  used on input line 139.
 (pdftex.def)             Requested size: 252.0pt x 95.9539pt.
-<figure4_evaluation_setup.png, id=19, 1231.60126pt x 573.14125pt>
+<figure4_evaluation_setup.png, id=18, 1231.60126pt x 573.14125pt>
 File: figure4_evaluation_setup.png Graphic file (type png)
 <use figure4_evaluation_setup.png>
-Package pdftex.def Info: figure4_evaluation_setup.png  used on input line 152.
+Package pdftex.def Info: figure4_evaluation_setup.png  used on input line 154.
 (pdftex.def)             Requested size: 252.0pt x 117.26733pt.
- [3 <./figure2_features.png> <./figure3_rf_pipeline.png>] (./ai_methodology_enh
-ancement.tex
+ [3 <./figure1_architecture.png> <./figure2_features.png>]
+(./ai_methodology_enhancement.tex
 Underfull \hbox (badness 2903) in paragraph at lines 52--53
 []\OT1/ptm/b/n/10 Edge Com-put-ing Op-ti-miza-tion\OT1/ptm/m/n/10 : Lo-gis-tic 
 Re-gres-
@@ -379,8 +388,10 @@ Underfull \hbox (badness 2556) in paragraph at lines 65--66
 \OT1/ptm/m/n/10 per-for-mance degra-da-tion and op-ti-miza-tion strate-gies
  []
 
+[4 <./figure3_rf_pipeline.png> <./figure4_evaluation_setup.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
 5.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -389,7 +400,6 @@ Underfull \hbox (badness 4660) in paragraph at lines 75--76
 s-tent
  []
 
-[4 <./figure4_evaluation_setup.png>]
 <feature_importance.png, id=30, 860.013pt x 570.933pt>
 File: feature_importance.png Graphic file (type png)
 <use feature_importance.png>
@@ -400,55 +410,58 @@ Underfull \hbox (badness 1502) in paragraph at lines 113--114
 \OT1/ptm/m/n/10 tribute mean-ing-ful but lim-ited dis-crim-i-na-tive power.
  []
 
-)
-<ai_pipeline_detailed.png, id=31, 1541.76pt x 1027.84pt>
+[5 <./feature_importance.png>])
+<ai_pipeline_detailed.png, id=35, 1541.76pt x 1027.84pt>
 File: ai_pipeline_detailed.png Graphic file (type png)
 <use ai_pipeline_detailed.png>
-Package pdftex.def Info: ai_pipeline_detailed.png  used on input line 173.
+Package pdftex.def Info: ai_pipeline_detailed.png  used on input line 177.
 (pdftex.def)             Requested size: 252.0pt x 167.98656pt.
-<figure5_performance_results.png, id=32, 1541.76pt x 1027.84pt>
+<figure5_performance_results.png, id=36, 1541.76pt x 1027.84pt>
 File: figure5_performance_results.png Graphic file (type png)
 <use figure5_performance_results.png>
 Package pdftex.def Info: figure5_performance_results.png  used on input line 18
-3.
+7.
 (pdftex.def)             Requested size: 252.0pt x 167.98656pt.
- [5 <./feature_importance.png>]
-Underfull \hbox (badness 1400) in paragraph at lines 212--213
+ [6 <./ai_pipeline_detailed.png (PNG copy)> <./figure5_performance_results.png 
+(PNG copy)>]
+Underfull \hbox (badness 1400) in paragraph at lines 216--217
 []\OT1/ptm/m/n/10 Future work will ad-dress these AI-specific chal-lenges
  []
 
 
-Underfull \hbox (badness 6078) in paragraph at lines 217--218
+Underfull \hbox (badness 6078) in paragraph at lines 221--222
 []\OT1/ptm/b/n/10 Adversarial Ro-bust-ness\OT1/ptm/m/n/10 : De-vel-op-ing adver
 sarially-
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 219--220
+Underfull \hbox (badness 2762) in paragraph at lines 223--224
 []\OT1/ptm/b/n/10 Continual Learn-ing\OT1/ptm/m/n/10 : Im-ple-ment-ing on-line 
 learn-ing
  []
 
-[6 <./ai_pipeline_detailed.png (PNG copy)> <./figure5_performance_results.png (
-PNG copy)>] (./main.bbl [7]) [8
+(./main.bbl [7]) [8
 
-] (./main.aux) ) 
+] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4061 strings out of 480247
  65684 string characters out of 5896150
- 369729 words of memory out of 5000000
+ 366859 words of memory out of 5000000
  21950 multiletter control sequences out of 15000+600000
  513233 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,10n,62p,829b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on main.pdf (8 pages, 5441674 bytes).
+ 55i,10n,62p,1546b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 5443406 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
