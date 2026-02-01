@@ -4,53 +4,9 @@ A lightweight, deployment-ready machine learning system for detecting malicious 
 
 ## System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         IoT Gateway Edge Device                      │
-│                      (Raspberry Pi / Jetson Nano)                    │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                       │
-│  ┌────────────────┐         ┌──────────────────┐                   │
-│  │  Network       │────────▶│  URL Detection   │                   │
-│  │  Traffic       │         │  Service         │                   │
-│  │  (DNS/HTTP)    │         │  (REST API)      │                   │
-│  └────────────────┘         └────────┬─────────┘                   │
-│                                       │                              │
-│                                       ▼                              │
-│                        ┌──────────────────────────┐                 │
-│                        │  Feature Extraction      │                 │
-│                        │  - URL Lexical (12)      │                 │
-│                        │  - Domain Metadata (10)  │                 │
-│                        │  - DNS Features (5)      │                 │
-│                        │  - SSL/TLS (4)           │                 │
-│                        └──────────┬───────────────┘                 │
-│                                   │                                  │
-│                                   ▼                                  │
-│                        ┌──────────────────────────┐                 │
-│                        │  Random Forest Classifier │                 │
-│                        │  - 100 estimators         │                 │
-│                        │  - 1.8 MB model          │                 │
-│                        │  - 7.31 ms inference     │                 │
-│                        └──────────┬───────────────┘                 │
-│                                   │                                  │
-│                                   ▼                                  │
-│                        ┌──────────────────────────┐                 │
-│                        │  Detection Result        │                 │
-│                        │  - Malicious/Benign      │                 │
-│                        │  - Confidence Score      │                 │
-│                        │  - Processing Time       │                 │
-│                        └──────────┬───────────────┘                 │
-│                                   │                                  │
-│  ┌────────────────────────────────┴────────────────────────────┐   │
-│  │                                                               │   │
-│  ▼                          ▼                        ▼          │   │
-│ ┌──────────┐        ┌──────────────┐        ┌─────────────┐   │   │
-│ │ Firewall │        │  SIEM/Logs   │        │ Prometheus  │   │   │
-│ │ Block    │        │  (Splunk)    │        │ Metrics     │   │   │
-│ └──────────┘        └──────────────┘        └─────────────┘   │   │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="https://res.cloudinary.com/dh41tyuha/image/upload/v1761564847/Screenshot_from_2025-10-27_20-33-13_aydcbw.png" alt="System Architecture" width="800"/>
+</p>
 
 ### Data Flow Pipeline
 
