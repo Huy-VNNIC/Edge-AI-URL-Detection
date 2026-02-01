@@ -2,6 +2,65 @@
 
 A lightweight, deployment-ready machine learning system for detecting malicious URLs and domains at the IoT gateway edge. This system achieves 72.30% accuracy with only 3.5 MB memory footprint and 10.50 ms end-to-end latency, making it suitable for resource-constrained edge devices.
 
+## System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         IoT Gateway Edge Device                      │
+│                      (Raspberry Pi / Jetson Nano)                    │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌────────────────┐         ┌──────────────────┐                   │
+│  │  Network       │────────▶│  URL Detection   │                   │
+│  │  Traffic       │         │  Service         │                   │
+│  │  (DNS/HTTP)    │         │  (REST API)      │                   │
+│  └────────────────┘         └────────┬─────────┘                   │
+│                                       │                              │
+│                                       ▼                              │
+│                        ┌──────────────────────────┐                 │
+│                        │  Feature Extraction      │                 │
+│                        │  - URL Lexical (12)      │                 │
+│                        │  - Domain Metadata (10)  │                 │
+│                        │  - DNS Features (5)      │                 │
+│                        │  - SSL/TLS (4)           │                 │
+│                        └──────────┬───────────────┘                 │
+│                                   │                                  │
+│                                   ▼                                  │
+│                        ┌──────────────────────────┐                 │
+│                        │  Random Forest Classifier │                 │
+│                        │  - 100 estimators         │                 │
+│                        │  - 1.8 MB model          │                 │
+│                        │  - 7.31 ms inference     │                 │
+│                        └──────────┬───────────────┘                 │
+│                                   │                                  │
+│                                   ▼                                  │
+│                        ┌──────────────────────────┐                 │
+│                        │  Detection Result        │                 │
+│                        │  - Malicious/Benign      │                 │
+│                        │  - Confidence Score      │                 │
+│                        │  - Processing Time       │                 │
+│                        └──────────┬───────────────┘                 │
+│                                   │                                  │
+│  ┌────────────────────────────────┴────────────────────────────┐   │
+│  │                                                               │   │
+│  ▼                          ▼                        ▼          │   │
+│ ┌──────────┐        ┌──────────────┐        ┌─────────────┐   │   │
+│ │ Firewall │        │  SIEM/Logs   │        │ Prometheus  │   │   │
+│ │ Block    │        │  (Splunk)    │        │ Metrics     │   │   │
+│ └──────────┘        └──────────────┘        └─────────────┘   │   │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow Pipeline
+
+```
+URL Input → Feature Extraction → Normalization → Random Forest → Decision
+  (0ms)         (3.19ms)           (0ms)          (7.31ms)      (10.50ms total)
+```
+
+See [detailed architecture documentation](docs/architecture.md) for component specifications and deployment modes.
+
 ## Overview
 
 Traditional cloud-based URL detection systems introduce unacceptable latency and privacy concerns for IoT deployments. This project implements a complete Edge-AI solution that processes URLs locally at the gateway level, providing real-time threat detection without requiring cloud connectivity.
@@ -189,38 +248,81 @@ logging:
 ```
 Edge-AI-URL-Detection/
 ├── config/                  # Configuration files
-│   └── config.yaml
+│   └── config.yaml         # System configuration
+│
 ├── datasets/               # Dataset storage (not in git)
 │   ├── original/          # Raw datasets
-│   └── processed/         # Processed features
-├── deployment/            # Deployment configurations
-├── docker/               # Dockerfiles
-│   ├── Dockerfile.api
-│   └── Dockerfile.processor
-├── models/               # Trained models
-│   ├── rf_model.joblib
-│   ├── rf_scaler.joblib
-│   └── rf_features.txt
-├── notebooks/            # Jupyter notebooks for analysis
-├── paper/               # Research paper (FJCAI 2026)
-│   └── latex/
-├── reports/             # Evaluation reports and metrics
-├── scripts/             # Training and evaluation scripts
-│   ├── build_dataset.py
-│   ├── extract_features.py
-│   ├── train_model.py
-│   └── evaluate_system.py
+│   │   ├── cic_trap4phish/           # CIC Trap4Phish 2025
+│   │   ├── malicious_domain_features/ # 12-feature domain dataset
+│   │   ├── malicious_phish_dataset/   # Malicious phish URLs
+│   │   ├── base_json/                 # Base JSON datasets
+│   │   ├── CSV_benign.csv            # Benign URL samples
+│   │   ├── CSV_malware.csv           # Malware URL samples
+│   │   ├── CSV_phishing.csv          # Phishing URL samples
+│   │   └── CSV_spam.csv              # Spam URL samples
+│   └── processed/         # Processed features and splits
+│       ├── features/      # Extracted feature sets
+│       └── splits/        # Train/validation/test splits
+│
+├── data/                  # Working data directories
+│   ├── ablation/         # Ablation study results
+│   ├── hashed_domain_names/
+│   ├── processed/        # Processing outputs
+│   ├── regular_domain_names/
+│   └── splits/           # Dataset splits
+│
+├── deployment/           # Deployment configurations
+│
+├── docker/              # Docker containerization
+│   ├── Dockerfile.api           # API service container
+│   ├── Dockerfile.processor     # Processing service container
+│   └── prometheus.yml           # Prometheus monitoring config
+│
+├── docs/                # Documentation
+│   └── architecture.md  # System architecture details
+│
+├── models/              # Trained ML models
+│   ├── rf_model.joblib         # Random Forest model
+│   ├── rf_scaler.joblib        # Feature scaler
+│   ├── rf_features.txt         # Feature names
+│   └── test/                   # Test models
+│
+├── notebooks/           # Jupyter notebooks for analysis
+│
+├── paper/              # FJCAI 2026 Research Paper
+│   ├── latex/         # LaTeX source files
+│   └── img/           # Paper figures
+│
+├── reports/            # Evaluation reports and metrics
+│   ├── api_benchmark_results.json
+│   ├── evaluation_results.json
+│   ├── paper_metrics_complete.json
+│   └── cv_evaluation/         # Cross-validation results
+│
+├── scripts/            # Training and evaluation scripts
+│   ├── build_dataset.py            # Dataset construction
+│   ├── extract_features.py         # Feature extraction
+│   ├── train_model.py             # Model training
+│   ├── evaluate_system.py         # System evaluation
+│   ├── comprehensive_cv.py        # Cross-validation
+│   ├── api_benchmark.py           # API performance test
+│   ├── feature_importance_analysis.py
+│   └── ablation_study.py          # Ablation experiments
+│
 ├── src/                # Source code
-│   ├── api/           # REST API implementation
-│   ├── data/          # Data processing
-│   ├── features/      # Feature extraction
-│   ├── models/        # ML models
-│   └── utils/         # Utilities
-├── tests/             # Unit tests
-├── docker-compose.yml
-├── requirements.txt
+│   ├── api/           # REST API implementation (FastAPI)
+│   ├── data/          # Data processing pipelines
+│   ├── features/      # Feature extraction modules
+│   ├── models/        # ML model implementations
+│   └── utils/         # Utility functions
+│
+├── tests/             # Unit and integration tests
+│
+├── docker-compose.yml # Docker Compose configuration
+├── requirements.txt   # Python dependencies
+├── .gitignore        # Git ignore patterns
 ├── LICENSE           # MIT License
-└── README.md
+└── README.md         # This file
 ```
 
 ## Feature Engineering

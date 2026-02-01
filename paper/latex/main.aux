@@ -5,74 +5,112 @@
 \citation{ref_ai_iot_security}
 \citation{ref_edge_ai}
 \citation{ref_edge_latency}
-\citation{ref_rf_security}
-\citation{ref_lexical_features}
 \citation{ref_dns_detection}
+\citation{ref_lexical_features}
+\citation{ref_dga}
 \citation{ref_ssl_features}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
-\citation{ref_phishtank}
-\citation{ref_lexical_features,ref_url_features}
-\citation{ref_rf_security,ref_ensemble_learning}
+\citation{ref_phishtank,ref_lexical_features,ref_url_features}
+\citation{ref_malurl_2024}
+\citation{ref_phishing_lstm_2023}
+\citation{ref_dns_detection}
+\citation{ref_rf_security}
 \citation{ref_phishing_detection}
-\citation{ref_dns_detection,ref_domain_generation}
-\citation{ref_dga,ref_botnet_detection}
-\citation{ref_transformer,ref_deep_learning_security}
-\citation{ref_gnn}
+\citation{ref_urlnet_2018}
+\citation{ref_transformer_phish_2022}
+\citation{ref_url_gnn_2024}
+\citation{ref_transformer,ref_deep_learning_security,ref_gnn}
+\citation{ref_dns_detection}
+\citation{ref_dga,ref_dns_ml_2023}
+\citation{ref_domain_generation,ref_botnet_detection}
+\citation{ref_edge_ids_2023,ref_federated_iot_2024,ref_edge_ai_survey_2023}
 \citation{ref_edge_ai,ref_edge_computing_survey}
 \citation{ref_cybersecurity_ml,ref_malware_detection}
 \citation{ref_iot_gateway}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}System Architecture}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Threat Model and Security Assumptions}{2}{}\protected@file@percent }
 \citation{ref_ssl_features}
-\citation{ref_feature_selection}
-\citation{ref_rf_security}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}System Architecture Overview}{3}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overall system architecture for Edge-AI malicious URL detection at IoT gateway.}}{3}{}\protected@file@percent }
 \newlabel{fig:architecture}{{1}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}System Architecture}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Feature Engineering}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}URL Lexical Features}{3}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hybrid feature extraction pipeline combining multiple data sources.}}{3}{}\protected@file@percent }
-\newlabel{fig:features}{{2}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}DNS Features}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}SSL Certificate Features}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Domain Metadata Features}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {V}Machine Learning Model Implementation}{3}{}\protected@file@percent }
-\citation{ref_urlhaus}
+\citation{ref_feature_selection}
+\citation{ref_dns_detection}
+\citation{ref_rf_security}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hybrid feature extraction pipeline combining multiple data sources.}}{4}{}\protected@file@percent }
+\newlabel{fig:features}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}SSL Certificate Features}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Domain Metadata Features}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Feature Selection Rationale: Why 31 Features?}{4}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Random Forest inference pipeline with measured timing breakdown.}}{4}{}\protected@file@percent }
 \newlabel{fig:pipeline}{{3}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Experimental evaluation setup showing measurement methodology.}}{4}{}\protected@file@percent }
-\newlabel{fig:setup}{{4}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Machine Learning Model Implementation}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Experimental Setup}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Enhanced AI Methodology and Comparative Analysis}{4}{}\protected@file@percent }
-\newlabel{sec:ai_methodology}{{VII}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Multi-Model AI Framework}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Comprehensive Performance Comparison}{4}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comprehensive AI Model Performance Comparison}}{4}{}\protected@file@percent }
-\newlabel{tab:model_comparison}{{I}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Scientific Contribution Analysis}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-C}1}Novel Findings}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-C}2}AI Methodology Depth}{5}{}\protected@file@percent }
+\citation{ref_urlhaus}
+\citation{ref_phishing_lstm_2023,ref_transformer_phish_2022,ref_url_gnn_2024}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Experimental evaluation setup showing measurement methodology.}}{5}{}\protected@file@percent }
+\newlabel{fig:setup}{{4}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Enhanced AI Methodology and Comparative Analysis}{5}{}\protected@file@percent }
+\newlabel{sec:ai_methodology}{{VII}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Multi-Model AI Framework}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Comprehensive Performance Comparison}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comprehensive AI Model Performance Comparison}}{5}{}\protected@file@percent }
+\newlabel{tab:model_comparison}{{I}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Scientific Contribution Analysis}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Justification for Random Forest Selection}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Feature Engineering Innovation}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-F}}AI Methodology Contribution Statement}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-G}}Feature Importance and Ablation Analysis}{5}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Random Forest feature importance analysis showing quantitative contributions of 31-dimensional feature space with ranked discriminative power}}{5}{}\protected@file@percent }
-\newlabel{fig:feature_importance}{{5}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Comparison with Cloud-Based Detection Systems}{5}{}\protected@file@percent }
+\citation{ref_urlnet_2018}
+\citation{ref_urlnet_2018}
+\citation{ref_transformer_phish_2022}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Edge-AI vs. Cloud-Based URL Detection Comparison}}{6}{}\protected@file@percent }
+\newlabel{tab:edge_vs_cloud}{{II}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-E}1}Justification of Edge Deployment Trade-offs}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-F}}Why Language Models Were Not Considered}{6}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Language Model Resources vs. Edge Constraints}}{6}{}\protected@file@percent }
+\newlabel{tab:lm_constraints}{{III}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-F}1}Resource Constraint Analysis}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-F}2}Fundamental Incompatibilities}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-F}3}Empirical Evidence}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-G}}Feature Importance and Ablation Analysis}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Random Forest feature importance analysis showing quantitative contributions of 31-dimensional feature space with ranked discriminative power}}{6}{}\protected@file@percent }
+\newlabel{fig:feature_importance}{{5}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-G}1}Feature Category Analysis}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Results and Discussion}{6}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comprehensive Edge-AI malicious URL detection pipeline showing feature engineering, multi-model AI comparison, and deployment optimization with quantified performance metrics}}{6}{}\protected@file@percent }
-\newlabel{fig:ai_pipeline}{{6}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comprehensive AI performance evaluation results showing (a) multi-model accuracy comparison, (b) inference latency analysis, (c) memory footprint breakdown, and (d) throughput performance across AI approaches}}{6}{}\protected@file@percent }
-\newlabel{fig:results}{{7}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Offline Performance}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Online API Performance}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Accuracy Analysis}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VII-G}2}Systematic Ablation Study}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comprehensive Edge-AI malicious URL detection pipeline showing feature engineering, multi-model AI comparison, and deployment optimization with quantified performance metrics}}{7}{}\protected@file@percent }
+\newlabel{fig:ai_pipeline}{{6}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Feature Ablation Study Results (Random Forest)}}{7}{}\protected@file@percent }
+\newlabel{tab:ablation_study}{{IV}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Results and Discussion}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comprehensive AI performance evaluation results showing (a) multi-model accuracy comparison, (b) inference latency analysis, (c) memory footprint breakdown, and (d) throughput performance across AI approaches}}{7}{}\protected@file@percent }
+\newlabel{fig:results}{{7}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Offline Performance}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Online API Performance}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Accuracy Analysis}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-D}}Attack Pattern Analysis and Failure Case Study}{7}{}\protected@file@percent }
 \citation{ref_concept_drift}
 \citation{ref_adversarial_ml}
 \citation{ref_federated_learning,ref_online_learning}
 \citation{ref_ai_security_future}
-\@writefile{toc}{\contentsline {section}{\numberline {IX}Threats to Validity and AI Limitations}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}Future AI Research Directions}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {X}Conclusion and Future Work}{7}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Representative Malicious URL Patterns Successfully Detected}}{8}{}\protected@file@percent }
+\newlabel{tab:attack_patterns}{{V}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VIII-D}1}Typical Malicious URL Patterns Detected}{8}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Root Causes of Misclassifications (sampled from test set)}}{8}{}\protected@file@percent }
+\newlabel{tab:false_negatives}{{VI}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-E}}Threats to Validity and AI Limitations}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {VIII-E}1}Future AI Research Directions}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Practical Deployment Guidelines}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}Can Practitioners Directly Reuse the Dataset and Trained Model?}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IX-A}1}Dataset Reusability Assessment}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {IX-A}2}Trained Model Reusability Assessment}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-B}}Deployment Workflow}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-C}}Hardware Compatibility \& Integration}{9}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces 4-Phase Deployment Workflow}}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-D}}Cost-Benefit Analysis}{9}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Annual TCO: Edge-AI vs. Cloud}}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {X}Conclusion and Future Work}{9}{}\protected@file@percent }
 \bibstyle{IEEEtran}
 \bibdata{references}
 \bibcite{ref_iot_security}{1}
@@ -80,30 +118,38 @@
 \bibcite{ref_edge_ai}{3}
 \bibcite{ref_ai_iot_security}{4}
 \bibcite{ref_edge_latency}{5}
-\bibcite{ref_lexical_features}{6}
-\bibcite{ref_dns_detection}{7}
-\bibcite{ref_ssl_features}{8}
-\bibcite{ref_phishtank}{9}
-\bibcite{ref_url_features}{10}
-\bibcite{ref_rf_security}{11}
-\bibcite{ref_ensemble_learning}{12}
-\bibcite{ref_phishing_detection}{13}
-\bibcite{ref_domain_generation}{14}
-\bibcite{ref_dga}{15}
-\bibcite{ref_botnet_detection}{16}
-\bibcite{ref_transformer}{17}
-\bibcite{ref_deep_learning_security}{18}
-\bibcite{ref_gnn}{19}
-\bibcite{ref_edge_computing_survey}{20}
-\bibcite{ref_cybersecurity_ml}{21}
-\bibcite{ref_malware_detection}{22}
-\bibcite{ref_iot_gateway}{23}
-\bibcite{ref_feature_selection}{24}
-\bibcite{ref_urlhaus}{25}
-\bibcite{ref_concept_drift}{26}
-\bibcite{ref_adversarial_ml}{27}
-\bibcite{ref_federated_learning}{28}
-\bibcite{ref_online_learning}{29}
-\bibcite{ref_ai_security_future}{30}
-\@writefile{toc}{\contentsline {section}{References}{8}{}\protected@file@percent }
-\gdef \@abspage@last{8}
+\bibcite{ref_dns_detection}{6}
+\bibcite{ref_lexical_features}{7}
+\bibcite{ref_dga}{8}
+\bibcite{ref_ssl_features}{9}
+\bibcite{ref_phishtank}{10}
+\bibcite{ref_url_features}{11}
+\bibcite{ref_malurl_2024}{12}
+\bibcite{ref_phishing_lstm_2023}{13}
+\bibcite{ref_rf_security}{14}
+\bibcite{ref_phishing_detection}{15}
+\bibcite{ref_urlnet_2018}{16}
+\bibcite{ref_transformer_phish_2022}{17}
+\bibcite{ref_url_gnn_2024}{18}
+\bibcite{ref_transformer}{19}
+\bibcite{ref_deep_learning_security}{20}
+\bibcite{ref_gnn}{21}
+\bibcite{ref_dns_ml_2023}{22}
+\bibcite{ref_domain_generation}{23}
+\bibcite{ref_botnet_detection}{24}
+\bibcite{ref_edge_ids_2023}{25}
+\bibcite{ref_federated_iot_2024}{26}
+\bibcite{ref_edge_ai_survey_2023}{27}
+\bibcite{ref_edge_computing_survey}{28}
+\bibcite{ref_cybersecurity_ml}{29}
+\bibcite{ref_malware_detection}{30}
+\bibcite{ref_iot_gateway}{31}
+\bibcite{ref_feature_selection}{32}
+\bibcite{ref_urlhaus}{33}
+\bibcite{ref_concept_drift}{34}
+\bibcite{ref_adversarial_ml}{35}
+\bibcite{ref_federated_learning}{36}
+\bibcite{ref_online_learning}{37}
+\bibcite{ref_ai_security_future}{38}
+\@writefile{toc}{\contentsline {section}{References}{10}{}\protected@file@percent }
+\gdef \@abspage@last{10}

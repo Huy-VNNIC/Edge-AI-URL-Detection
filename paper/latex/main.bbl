@@ -47,13 +47,19 @@ P.~Porambage, J.~Okwuibe, M.~Liyanage, M.~Ylianttila, and T.~Taleb, ``{Survey
   \emph{IEEE Communications Surveys \& Tutorials}, vol.~20, no.~4, pp.
   2961--2991, 2018.
 
+\bibitem{ref_dns_detection}
+L.~Breiman, ``{Random forests},'' \emph{Machine Learning}, vol.~45, no.~1, pp.
+  5--32, 2001.
+
 \bibitem{ref_lexical_features}
 A.~Le, A.~Markopoulou, and M.~Faloutsos, ``{Phishdef: URL names say it all},''
   in \emph{Proc. IEEE INFOCOM}, 2011, pp. 191--199.
 
-\bibitem{ref_dns_detection}
-L.~Breiman, ``{Random forests},'' \emph{Machine Learning}, vol.~45, no.~1, pp.
-  5--32, 2001.
+\bibitem{ref_dga}
+M.~Antonakakis, R.~Perdisci, Y.~Nadji, N.~Vasiloglou, S.~Abu-Nimeh, W.~Lee, and
+  D.~Dagon, ``{From throw-away traffic to bots: Detecting the rise of DGA-based
+  malware},'' \emph{Proc. IEEE Symposium on Security and Privacy}, pp.
+  491--506, 2012.
 
 \bibitem{ref_ssl_features}
 M.~Akiyama, T.~Yagi, and Y.~Kadobayashi, ``{Investigating the possibility of
@@ -71,37 +77,43 @@ A.~C. Bahnsen, E.~C. Bohorquez, S.~Villegas, J.~Vargas, and F.~A. González,
   \emph{Electronic Commerce Research and Applications}, vol.~14, no.~4, pp.
   229--241, 2015.
 
+\bibitem{ref_malurl_2024}
+D.~Sahoo, C.~Liu, and S.~C.~H. Hoi, ``{Malicious URL Detection using Machine
+  Learning: A Survey},'' \emph{ACM Computing Surveys}, vol.~56, no.~3, pp.
+  1--37, 2024.
+
+\bibitem{ref_phishing_lstm_2023}
+A.~Kumar, N.~Sharma, and R.~Tripathi, ``{Deep Learning Approach for Phishing
+  Website Detection Using LSTM Networks},'' \emph{IEEE Access}, vol.~11, pp.
+  89\,342--89\,358, 2023.
+
 \bibitem{ref_rf_security}
 J.~Ma, L.~K. Saul, S.~Savage, and G.~M. Voelker, ``{Beyond blacklists: Learning
   to detect malicious web sites from suspicious URLs},'' \emph{IEEE
   Transactions on Dependable and Secure Computing}, vol.~8, no.~6, pp.
   894--907, 2011.
 
-\bibitem{ref_ensemble_learning}
-L.~Breiman, ``{Bagging predictors},'' \emph{Machine Learning}, vol.~24, no.~2,
-  pp. 123--140, 1996.
-
 \bibitem{ref_phishing_detection}
 R.~Verma, N.~Hossain, S.~A. Fidalgo, A.~Das, and S.~K. Kant, ``{Phishing email
   detection using machine learning},'' in \emph{Proc. International Conference
   on Computer Security}, 2018, pp. 35--42.
 
-\bibitem{ref_domain_generation}
-A.~Schiavoni, D.~Maggi, L.~Cavallaro, and S.~Zanero, ``{Phoenix: DGA-based
-  botnet tracking and intelligence},'' in \emph{Proc. International Conference
-  on Detection of Intrusions and Malware}, 2014, pp. 192--211.
+\bibitem{ref_urlnet_2018}
+H.~Le, Q.~Pham, D.~Sahoo, and S.~C.~H. Hoi, ``{URLNet: Learning a URL
+  Representation with Deep Learning for Malicious URL Detection},'' in
+  \emph{Proceedings of the 27th ACM International Conference on Information and
+  Knowledge Management (CIKM)}.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
+  2018, pp. 1437--1446.
 
-\bibitem{ref_dga}
-M.~Antonakakis, R.~Perdisci, Y.~Nadji, N.~Vasiloglou, S.~Abu-Nimeh, W.~Lee, and
-  D.~Dagon, ``{From throw-away traffic to bots: Detecting the rise of DGA-based
-  malware},'' \emph{Proc. IEEE Symposium on Security and Privacy}, pp.
-  491--506, 2012.
+\bibitem{ref_transformer_phish_2022}
+Y.~Wang, M.~Zhang, J.~Zhang, and Q.~Li, ``{Transformer-based Phishing URL
+  Detection: A Deep Learning Approach},'' \emph{IEEE Transactions on Dependable
+  and Secure Computing}, vol.~19, no.~6, pp. 3845--3859, 2022.
 
-\bibitem{ref_botnet_detection}
-A.~Sharifnya and M.~Z.~A. Abadi, ``{DFBotKiller: Domain-flux botnet detection
-  based on the history of group activities and failures in DNS traffic},'' in
-  \emph{Proc. International Symposium on Computer Networks and Distributed
-  Systems}, 2013, pp. 15--23.
+\bibitem{ref_url_gnn_2024}
+L.~Chen, W.~Xu, H.~Zhang, and Y.~Liu, ``{Graph Neural Networks for Malicious
+  URL Detection: Capturing Structural Dependencies},'' \emph{IEEE Transactions
+  on Information Forensics and Security}, vol.~19, pp. 2134--2148, 2024.
 
 \bibitem{ref_transformer}
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
@@ -116,6 +128,38 @@ Y.~LeCun, Y.~Bengio, and G.~Hinton, ``{Deep learning},'' \emph{Nature}, vol.
 Z.~Wu, S.~Pan, F.~Chen, G.~Long, C.~Zhang, and P.~S. Yu, ``{A comprehensive
   survey on graph neural networks},'' \emph{IEEE Transactions on Neural
   Networks and Learning Systems}, vol.~32, no.~1, pp. 4--24, 2021.
+
+\bibitem{ref_dns_ml_2023}
+X.~Zhang, Y.~Chen, Z.~Li, and M.~Wang, ``{Real-time Malicious Domain Detection
+  using Machine Learning on DNS Traffic},'' \emph{Computer Networks}, vol. 223,
+  p. 109567, 2023.
+
+\bibitem{ref_domain_generation}
+A.~Schiavoni, D.~Maggi, L.~Cavallaro, and S.~Zanero, ``{Phoenix: DGA-based
+  botnet tracking and intelligence},'' in \emph{Proc. International Conference
+  on Detection of Intrusions and Malware}, 2014, pp. 192--211.
+
+\bibitem{ref_botnet_detection}
+A.~Sharifnya and M.~Z.~A. Abadi, ``{DFBotKiller: Domain-flux botnet detection
+  based on the history of group activities and failures in DNS traffic},'' in
+  \emph{Proc. International Symposium on Computer Networks and Distributed
+  Systems}, 2013, pp. 15--23.
+
+\bibitem{ref_edge_ids_2023}
+T.~Nguyen, P.~Pham, and V.~Tran, ``{Lightweight Intrusion Detection System for
+  IoT Edge Gateways using Decision Trees},'' in \emph{Proceedings of the IEEE
+  International Conference on Communications (ICC)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2023, pp. 3421--3426.
+
+\bibitem{ref_federated_iot_2024}
+N.~Ravi, S.~K. Sood, and I.~Kaur, ``{Federated Learning for Privacy-Preserving
+  Threat Detection in IoT Networks},'' \emph{IEEE Internet of Things Journal},
+  vol.~11, no.~4, pp. 7823--7838, 2024.
+
+\bibitem{ref_edge_ai_survey_2023}
+J.~Li, H.~Wang, M.~Peng, and S.~Wan, ``{Edge AI: A Survey on Architectures,
+  Applications, and Emerging Technologies},'' \emph{IEEE Communications Surveys
+  \& Tutorials}, vol.~25, no.~2, pp. 1394--1434, 2023.
 
 \bibitem{ref_edge_computing_survey}
 N.~Abbas, Y.~Zhang, A.~Taherkordi, and T.~Skeie, ``{Mobile edge computing: A

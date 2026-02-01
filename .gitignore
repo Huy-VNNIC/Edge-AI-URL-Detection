@@ -16,12 +16,9 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # Virtual Environment
 .venv/
@@ -35,25 +32,27 @@ env/
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb
 
-# Data files (large datasets)
-*.csv
-*.json
-*.parquet
-*.h5
-*.hdf5
+# Dataset files (large files excluded from git)
+datasets/original/**/*.csv
+datasets/original/**/*.json
+datasets/original/**/*.xlsx
+datasets/processed/**/*.csv
+datasets/processed/**/*.pkl
+datasets/processed/**/*.npy
 
-# Except config files
-!config/*.yaml
-!config/*.json
-!base_json/*.json
+# Legacy dataset directories (already moved)
+CSVs/
+data_1/
+Malicious*/
+CIC_Trap4Phish*/
+base_json/
 
-# Model files (large binary)
+# Model files (large binary files)
 *.joblib
 *.pkl
 *.h5
@@ -61,40 +60,48 @@ env/
 *.pth
 *.onnx
 
-# Except documented models
+# Preserve model documentation
 !models/README.md
 !models/rf_features.txt
 
 # Logs
-logs/*.log
-logs/*.txt
+logs/
 *.log
 
-# Docker
-*.tar
-*.tar.gz
+# Reports (keep only essential ones)
+reports/test/
+reports/archive/
 
-# LaTeX
-paper/latex/*.aux
-paper/latex/*.bbl
-paper/latex/*.blg
-paper/latex/*.log
-paper/latex/*.out
-paper/latex/*.toc
-paper/latex/*.synctex.gz
-paper/latex/*.fls
-paper/latex/*.fdb_latexmk
+# Data processing outputs
+data/ablation/*.csv
+data/processed/*.csv
+data/splits/*.csv
 
-# Keep PDF
-!paper/latex/*.pdf
+# Configuration (keep templates)
+config/*.yaml
+!config/config.yaml
 
-# Reports (optional - comment out if you want to track)
-reports/*.json
-reports/*.txt
-reports/*.png
-reports/*.jpg
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.lof
+*.lot
 
-# System
-.cache/
-*.tmp
-*.bak
+# Keep PDFs in paper directory
+!paper/**/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
