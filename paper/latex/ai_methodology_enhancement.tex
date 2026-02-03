@@ -23,12 +23,14 @@ Table~\ref{tab:model_comparison} presents the detailed performance analysis acro
 
 \begin{table}[htbp]
 \centering
-{\small
+{\footnotesize
 \caption{Comprehensive AI Model Performance Comparison}
 \label{tab:model_comparison}
-\begin{tabular}{lllllll}
+\begin{tabular}{@{}lccccrr@{}}
 \toprule
-Model & Acc (\%) & F1 & Pred (ms) & Size (MB) & Mem (MB) & Throughput \\\midrule
+Model & Acc & F1 & Pred & Size & Mem & Thr \\
+ & (\%) &  & (ms) & (MB) & (MB) & (s/s) \\
+\midrule
 Random Forest & \textbf{72.30} & \textbf{0.71} & 7.31 & 1.80 & 3.5 & 137 \\
 Logistic Regr. & 72.37 & 0.71 & \textbf{2.45} & \textbf{0.002} & \textbf{0.8} & \textbf{408} \\
 Neural Network & 72.03 & 0.71 & 3.12 & \textbf{0.05} & 1.5 & 321 \\
