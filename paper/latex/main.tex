@@ -432,41 +432,43 @@ Phase & Key Actions \\
 \end{table}
 }
 
-\subsection{Hardware Compatibility \& Integration}
+\subsection{Hardware Requirements and Deployment Checklist}
 
-{\small
-\textbf{Tested Platforms:} Raspberry Pi 4 (10.5ms, optimal), Jetson Nano (8.2ms, optimal), Industrial PLC (18.7ms, use 23-feature mode), BeagleBone (31.4ms, 19-feature minimal mode). ESP32 not supported (insufficient memory).
-
-\textbf{SIEM Integration:} Forward JSON responses to Splunk/ELK/Sentinel for correlation. \textbf{Firewall Modes:} Inline blocking (score$>$0.70), passive monitoring, or hybrid (auto-block$>$0.85, alert 0.60-0.85). \textbf{Threat Intel:} Export to MISP/ThreatConnect, subscribe to URLHaus/PhishTank via STIX/TAXII.
-}
-
-\subsection{Cost-Benefit Analysis}
-
-{\footnotesize
 \begin{table}[htbp]
 \centering
-\caption{Annual TCO: Edge-AI vs. Cloud}
+\caption{Device-Specific Configurations}
 {\scriptsize
-\begin{tabular}{lp{1.5cm}p{1.5cm}}
+\begin{tabular}{@{}lccp{2.5cm}@{}}
 \toprule
-Cost Factor & Edge-AI & Cloud API \\
+\textbf{Device} & \textbf{RAM} & \textbf{Latency} & \textbf{Mode (Features)} \\
 \midrule
-Infrastructure & \$50-200 & \$0 \\
-API/Service & \$0 & \$5-25K \\
-Bandwidth & \$0 & \$500-2K \\
-Maintenance & \$500-1.5K & \$0 \\
-Compliance & \$0 & \$1-5K \\
-\midrule
-\textbf{Year 1} & \textbf{\$550-1.7K} & \textbf{\$6.5-32K} \\
+Raspberry Pi 4 & 4GB & 10.5ms & Full (31) \\
+Jetson Nano & 4GB & 8.2ms & Full (31) \\
+Indust. PLC & 1GB & 18.7ms & Balanced (23) \\
+BeagleBone & 512MB & 31.4ms & Minimal (19) \\
+ESP32/Arduino & $<$1MB & N/A & Not viable \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
+
+{\small
+\textbf{Checklist:} $\geq$512MB RAM, $\geq$100MHz CPU, Linux, Docker 24+, Python 3.8+. \textbf{Integration:} SIEM (Splunk/ELK), firewall (inline/passive), threat intel (MISP/STIX).
 }
 
-Break-even: 3-6 months for $>$50K daily queries; \$50-100K annual savings at $>$500K queries.
+\subsection{Cost-Benefit and Operator Concerns}
 
-\textbf{Key Operator Concerns:} \textit{Model updates?} Blue-green deployment with 24hr rollback. \textit{Training poisoning?} Source from verified feeds (URLHaus), statistical outlier detection. \textit{72\% accuracy sufficient?} Deploy hybrid: edge blocks obvious threats (10ms), escalate uncertain to cloud/human (25-30\% cases) for 80-85\% effective accuracy. \textit{Management justification?} \$6-30K savings, GDPR/HIPAA compliance, 24/7 resilience during cloud outages.
+{\small
+\textbf{TCO (Annual):} Edge-AI: \$550-1.7K (infra \$50-200, maint \$500-1.5K). Cloud: \$6.5-32K (API \$5-25K, bandwidth \$500-2K, compliance \$1-5K). Break-even: 3-6 months ($>$50K daily queries).
+
+\textbf{Key Concerns:} \textit{Updates?} Blue-green deployment, 24hr rollback. \textit{Poisoning?} Verified feeds (URLHaus), outlier detection. \textit{72\% enough?} Hybrid: edge blocks obvious (10ms), escalate uncertain to cloud (25-30\%), effective 80-85\%. \textit{Justification?} \$6-30K savings, GDPR/HIPAA, 24/7 resilience.
+}
+
+\subsection{Reproducibility and Model Maintenance}
+
+{\small
+\textbf{Training:} 145s (RF, 100 trees), 70K URLs, AMD Ryzen 7 5800H. \textbf{Updates:} Quarterly retraining, 5-10K new samples, 2-3hr process, blue-green deployment. \textbf{Triggers:} Accuracy drop $>$5\%, FP rate $>$5\%, major threats. \textbf{Availability:} Full code/data on GitHub with Docker scripts.
+}
 
 % Conclusion and Future Work
 \section{Conclusion and Future Work}
